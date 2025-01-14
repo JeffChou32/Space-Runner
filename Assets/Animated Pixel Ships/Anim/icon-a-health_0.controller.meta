@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: c2ffe48d9ba849942a02c4732caf925c
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 224023
+  packageName: Animated Pixel Ships
+  packageVersion: 1.5.6
+  assetPath: Assets/Animated Pixel Ships/Anim/icon-a-health_0.controller
+  uploadId: 601809

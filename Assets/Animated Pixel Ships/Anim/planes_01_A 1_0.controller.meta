@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 1c60f877d97dfda48b9d8d99d544ff0c
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 224023
+  packageName: Animated Pixel Ships
+  packageVersion: 1.5.6
+  assetPath: Assets/Animated Pixel Ships/Anim/planes_01_A 1_0.controller
+  uploadId: 601809

@@ -1,0 +1,44 @@
+using UnityEngine;
+
+public class asteroidmovescript : MonoBehaviour
+{    
+    public float moveSpeed = 5;
+    private static float originalMoveSpeed;
+    public float deadZone = -20;
+    public float explodeRadius = 0;
+
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        originalMoveSpeed = moveSpeed;    
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        //if (shipscript.boost) explode();
+        moveSpeed = originalMoveSpeed * shipscript.multiplier;
+        transform.position = transform.position + (Vector3.down * moveSpeed) * Time.deltaTime;
+        if (transform.position.y < deadZone)
+        {
+            Debug.Log("Asteroid Deleted");
+            Destroy(gameObject);
+        }   
+    }
+    private void explode()
+    {
+        shipscript ship = FindAnyObjectByType<shipscript>(); // Find the ship in the scene
+
+        if (ship != null)
+        {
+            float distance = Vector3.Distance(transform.position, ship.transform.position);
+
+            // Collect if within the radius, regardless of ship collider state
+            if (distance <= explodeRadius)
+            {
+                Debug.Log("Asteroid Exploded");
+                Destroy(gameObject);
+            }
+        }
+    }
+}

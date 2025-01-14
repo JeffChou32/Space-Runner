@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: cc43887a82fe4184ba9745ecb8098e2b
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 224023
+  packageName: Animated Pixel Ships
+  packageVersion: 1.5.6
+  assetPath: Assets/Animated Pixel Ships/Anim/projectile-06-02_0.controller
+  uploadId: 601809

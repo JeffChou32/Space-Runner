@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 9d974024b47bfc34190ee4270ff6d658
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 9100000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 224023
+  packageName: Animated Pixel Ships
+  packageVersion: 1.5.6
+  assetPath: Assets/Animated Pixel Ships/Anim/support_units-red_0.controller
+  uploadId: 601809

@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: fd1a67e2574a91c4488b6fc050237810
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 7400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 224023
+  packageName: Animated Pixel Ships
+  packageVersion: 1.5.6
+  assetPath: Assets/Animated Pixel Ships/Anim/shield.anim
+  uploadId: 601809
