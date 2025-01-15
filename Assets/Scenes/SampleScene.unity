@@ -410,8 +410,8 @@ Transform:
   m_GameObject: {fileID: 269132072}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1.2, z: 0}
-  m_LocalScale: {x: 2, y: 8.1581955, z: 1}
+  m_LocalPosition: {x: 0, y: -0.26, z: 0}
+  m_LocalScale: {x: 0.34, y: 1.16, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 749571689}
@@ -833,7 +833,7 @@ ParticleSystem:
     startSize:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.02
+      scalar: 0.03
       minScalar: 1
       maxCurve:
         serializedVersion: 2
@@ -5913,7 +5913,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
-  m_Radius: 3.22
+  m_Radius: 0.24
 --- !u!212 &749571688
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -5958,7 +5958,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 395189498, guid: 80f0fe547a42d4849b5f8d1e31f9e70a, type: 3}
+  m_Sprite: {fileID: 4736449065902978594, guid: bf114cffc3007ee459a8a6f20834c45c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -5979,7 +5979,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: -4.5, z: 0}
-  m_LocalScale: {x: 0.08, y: 0.08, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 269132073}
@@ -6088,7 +6088,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   asteroid: {fileID: 7908103767387388644, guid: 00640aa38a52db543af6aec18180bc97, type: 3}
-  asteroidPrefabs: []
   heightOffset: 4
   spawnYThreshold: -10
 --- !u!4 &1028604515

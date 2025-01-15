@@ -103,8 +103,8 @@ public class shipscript : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {        
-        animator.SetTrigger("death");
+        animator.SetTrigger("death");        
         logic.gameOver();
         shipIsAlive = false;        
-    }
+    }   
 }
