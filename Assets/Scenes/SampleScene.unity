@@ -5443,7 +5443,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedBoost: {fileID: 889187822318032293, guid: 3e6a744b9cb40b540b36f761f735a161, type: 3}
   spawnRate: 4.5
-  heightOffset: 4
+  heightOffset: 3
 --- !u!4 &502358736
 Transform:
   m_ObjectHideFlags: 0
@@ -6058,7 +6058,7 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &1028604513
+--- !u!1 &788155513
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -6066,45 +6066,95 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 1028604515}
-  - component: {fileID: 1028604514}
-  m_Layer: 6
-  m_Name: asteroidSpawner
-  m_TagString: Asteroid
+  - component: {fileID: 788155515}
+  - component: {fileID: 788155514}
+  m_Layer: 7
+  m_Name: asteroidSpawner2Blue
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1028604514
+--- !u!114 &788155514
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1028604513}
+  m_GameObject: {fileID: 788155513}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9870c01e39569d24b94351056cc2e1d2, type: 3}
+  m_Script: {fileID: 11500000, guid: 73880993c94ed904bae94b8f18858d83, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  asteroid: {fileID: 7908103767387388644, guid: 00640aa38a52db543af6aec18180bc97, type: 3}
-  heightOffset: 4
-  spawnYThreshold: -10
---- !u!4 &1028604515
+  asteroidPrefabs:
+  - {fileID: 6302051134267672072, guid: 7cd4368b0dd15a541aa9254a30b9ded9, type: 3}
+  heightOffset: 7
+  spawnYThreshold: 8
+--- !u!4 &788155515
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1028604513}
+  m_GameObject: {fileID: 788155513}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.86, y: 5.59, z: 0.009060714}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.2796566, y: 11.485176, z: 0.03411548}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 1145846370}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &973765561
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 973765562}
+  - component: {fileID: 973765563}
+  m_Layer: 6
+  m_Name: asteroidSpawner2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &973765562
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 973765561}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.2796566, y: 11.485176, z: 0.045570016}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1145846370}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &973765563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 973765561}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73880993c94ed904bae94b8f18858d83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  asteroidPrefabs:
+  - {fileID: 1949584007634267119, guid: a5260aba9e82e1c4bb2cab8c5b810c05, type: 3}
+  - {fileID: 5231912693802968524, guid: a681901213816af4897b4adac34a5021, type: 3}
+  heightOffset: 7
+  spawnYThreshold: 8.5
 --- !u!1 &1076818733
 GameObject:
   m_ObjectHideFlags: 0
@@ -6264,6 +6314,40 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1135382589}
   m_CullTransparentMesh: 1
+--- !u!1 &1145846369
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1145846370}
+  m_Layer: 0
+  m_Name: Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1145846370
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1145846369}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.2796566, y: -1.4851764, z: -0.12415844}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 973765562}
+  - {fileID: 788155515}
+  - {fileID: 2096651329}
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1492174580
 GameObject:
   m_ObjectHideFlags: 0
@@ -6538,15 +6622,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1896315701}
   m_CullTransparentMesh: 1
+--- !u!1 &2096651327
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2096651329}
+  - component: {fileID: 2096651328}
+  m_Layer: 8
+  m_Name: asteroidSpawner2White
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &2096651328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2096651327}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73880993c94ed904bae94b8f18858d83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  asteroidPrefabs:
+  - {fileID: 7583588585917370061, guid: 2651ba37db46c654eaf7c09f67e73414, type: 3}
+  heightOffset: 7
+  spawnYThreshold: 7
+--- !u!4 &2096651329
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2096651327}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 1.2796566, y: 11.485176, z: 0.02076973}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1145846370}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
   m_Roots:
   - {fileID: 519420032}
   - {fileID: 749571689}
-  - {fileID: 1028604515}
   - {fileID: 155882259}
   - {fileID: 603724121}
   - {fileID: 760932255}
   - {fileID: 283093150}
   - {fileID: 502358736}
+  - {fileID: 1145846370}

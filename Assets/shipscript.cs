@@ -15,11 +15,9 @@ public class shipscript : MonoBehaviour
     public static int multiplier = 1;    
     public Text numBoosts;
     public int speedBoosts;
-    public Animator animator;
-    //private float initialYPosition;
+    public Animator animator;    
     private float startingYPosition;
-    public Collider2D myCollider;
-    //int boostsActive;
+    public Collider2D myCollider;    
     private List<float> boostTimers = new List<float>();    
 
     void Start()
@@ -54,13 +52,20 @@ public class shipscript : MonoBehaviour
             if (boostTimers[i] <= 0)
             {
                 boostTimers.RemoveAt(i);
-                multiplier -= 1;
-                //boostsActive -= 1;
+                multiplier -= 1;                
             }
         }
-        //myCollider.enabled = boostTimers.Count == 0 && Mathf.Approximately(transform.position.y, startingYPosition);
-        Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Default"), LayerMask.NameToLayer("Asteroid Layer"), !Mathf.Approximately(transform.position.y, startingYPosition));
-        boost = !(boostTimers.Count == 0);        
+
+        int defaultLayer = LayerMask.NameToLayer("Default");
+        int brownAsteroidLayer = LayerMask.NameToLayer("BrownAsteroid");
+        int blueAsteroidLayer = LayerMask.NameToLayer("BlueAsteroid");
+        int whiteAsteroidLayer = LayerMask.NameToLayer("WhiteAsteroid");
+        bool ignoreCollision = !Mathf.Approximately(transform.position.y, startingYPosition);        
+        Physics2D.IgnoreLayerCollision(defaultLayer, brownAsteroidLayer, multiplier >= 2 && ignoreCollision);        
+        Physics2D.IgnoreLayerCollision(defaultLayer, blueAsteroidLayer, multiplier >= 3 && ignoreCollision);        
+        Physics2D.IgnoreLayerCollision(defaultLayer, whiteAsteroidLayer, multiplier >= 4 && ignoreCollision);
+
+        boost = !(boostTimers.Count == 0);
 
         if (Input.GetKey(KeyCode.LeftArrow) && shipIsAlive)
         {
@@ -96,15 +101,16 @@ public class shipscript : MonoBehaviour
         speedBoosts -= 1;
         numBoosts.text = speedBoosts.ToString();
         boostTimers.Add(boostDuration);
-        multiplier += 1;        
-        //boostsActive += 1;
-        //initialYPosition = transform.position.y;
+        multiplier += 1;              
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {        
-        animator.SetTrigger("death");        
+        animator.SetTrigger("death");
+        myCollider.enabled = false;
+        Destroy(gameObject, 1f);
         logic.gameOver();
         shipIsAlive = false;        
-    }   
+    }
+    
 }
