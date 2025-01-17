@@ -3,7 +3,7 @@ using UnityEngine;
 public class starfieldscript : MonoBehaviour
 {
     public ParticleSystem starfield;
-    public float baseStartSpeed = 5;
+    public float baseSimSpeed = 10;
     private Vector3 originalScale;
     public int mult=1;
 
@@ -15,7 +15,7 @@ public class starfieldscript : MonoBehaviour
             starfield = GetComponent<ParticleSystem>();
         }
         var mainModule = starfield.main;
-        mainModule.startSpeed = baseStartSpeed;
+        mainModule.simulationSpeed = baseSimSpeed;
         originalScale = transform.localScale;
     }
 
@@ -25,7 +25,7 @@ public class starfieldscript : MonoBehaviour
         if (shipscript.boost) mult = shipscript.multiplier * 2;
         else mult = 1;
         var mainModule = starfield.main;
-        mainModule.startSpeed = baseStartSpeed * shipscript.multiplier;
+        mainModule.simulationSpeed = baseSimSpeed * shipscript.multiplier;
         
         transform.localScale = new Vector3(
             originalScale.x,
