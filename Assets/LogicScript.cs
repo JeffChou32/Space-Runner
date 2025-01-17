@@ -12,6 +12,8 @@ public class LogicScript : MonoBehaviour
     public GameObject gameOverScreen;
     public bool isGameOver = false;
     public Text highScore;
+    public Text mult;
+    public Color sample;
 
     private void Start()
     {
@@ -32,6 +34,21 @@ public class LogicScript : MonoBehaviour
                 playerScore += (1*shipscript.multiplier);
                 scoreText.text = playerScore.ToString();
                 distance -= 1f;  // Reset timer
+            }
+            if (shipscript.multiplier > 1)
+            {
+                mult.text = $"x{shipscript.multiplier}";
+                mult.gameObject.SetActive(true);
+                if (shipscript.multiplier == 2) mult.color = new Color(216f/255f, 121f/255f, 26f/255f, 1);
+                if (shipscript.multiplier == 3) mult.color = Color.cyan;
+                if (shipscript.multiplier > 3) mult.color = Color.white;
+
+                mult.fontSize = 80 + (shipscript.multiplier - 1) * 10;
+            }
+            else
+            {
+                mult.text = ""; // Clear the text
+                mult.gameObject.SetActive(false); 
             }
         }
                
