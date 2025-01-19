@@ -20,7 +20,8 @@ public class shipscript : MonoBehaviour
     public Collider2D myCollider;    
     public static float boostTimer = 0f;
     public float maxYPosition = 5f;
-    public static bool boostOver = false;
+    //public static bool boostOver = false;
+    private bool waitingForReturn = false;
 
 
     void Start()
@@ -56,20 +57,31 @@ public class shipscript : MonoBehaviour
             boostTimer -= Time.deltaTime;
             if (boostTimer <= 0)
             {
-                boostTimer = 0;
+                boostTimer = 0;                
                 multiplier = 1;
                 boost = false;
+                waitingForReturn = true;
             }
         }
+        if (waitingForReturn && Mathf.Approximately(transform.position.y, startingYPosition)) waitingForReturn = false;
 
         int defaultLayer = LayerMask.NameToLayer("Default");
         int brownAsteroidLayer = LayerMask.NameToLayer("BrownAsteroid");
         int blueAsteroidLayer = LayerMask.NameToLayer("BlueAsteroid");
         int whiteAsteroidLayer = LayerMask.NameToLayer("WhiteAsteroid");
-        bool ignoreCollision = !Mathf.Approximately(transform.position.y, startingYPosition);        
-        Physics2D.IgnoreLayerCollision(defaultLayer, brownAsteroidLayer, multiplier >= 2 && ignoreCollision);        
-        Physics2D.IgnoreLayerCollision(defaultLayer, blueAsteroidLayer, multiplier >= 3 && ignoreCollision);        
-        Physics2D.IgnoreLayerCollision(defaultLayer, whiteAsteroidLayer, multiplier >= 4 && ignoreCollision);
+        
+        //Physics2D.IgnoreLayerCollision(defaultLayer, brownAsteroidLayer, multiplier >= 2);        
+        //Physics2D.IgnoreLayerCollision(defaultLayer, blueAsteroidLayer, multiplier >= 3);        
+        //Physics2D.IgnoreLayerCollision(defaultLayer, whiteAsteroidLayer, multiplier >= 4);
+        if (multiplier >= 2) Physics2D.IgnoreLayerCollision(defaultLayer, brownAsteroidLayer, true);         
+        if (multiplier >= 3) Physics2D.IgnoreLayerCollision(defaultLayer, blueAsteroidLayer, true);                 
+        if (multiplier >= 4) Physics2D.IgnoreLayerCollision(defaultLayer, whiteAsteroidLayer, true);        
+        if (Mathf.Approximately(transform.position.y, startingYPosition))
+        {
+            Physics2D.IgnoreLayerCollision(defaultLayer, brownAsteroidLayer, false);
+            Physics2D.IgnoreLayerCollision(defaultLayer, blueAsteroidLayer, false);
+            Physics2D.IgnoreLayerCollision(defaultLayer, whiteAsteroidLayer, false);
+        }
 
         boost = boostTimer > 0;
 
@@ -96,7 +108,7 @@ public class shipscript : MonoBehaviour
         // Apply movement using Rigidbody2D
         myRigidBody.linearVelocity = new Vector2(velocityX, myRigidBody.linearVelocity.y);
 
-        if (Input.GetKeyDown(KeyCode.UpArrow) && (speedBoosts > 0))
+        if (Input.GetKeyDown(KeyCode.UpArrow) && (speedBoosts > 0) && !waitingForReturn)
         {
             ActivateSpeedBoost();
         }
