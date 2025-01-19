@@ -29,14 +29,15 @@ public class bigthrusterscript : MonoBehaviour
         var shape = thrusterParticles.shape;
         if (shipscript.multiplier > 3)
         {
+            if (!thrusterParticles.isPlaying) thrusterParticles.Play();
             shape.radius = baseShapeRadius * shipscript.multiplier / 4;
             main.startLifetime = new ParticleSystem.MinMaxCurve(
             baseMinLifetime * shipscript.multiplier / 4,
             baseMaxLifetime * shipscript.multiplier / 4);
             main.simulationSpeed = baseSimulationSpeed * shipscript.multiplier / 4;
-            thrusterParticles.Play();            
+                     
         }
-        else thrusterParticles.Stop();
+        else if (thrusterParticles.isPlaying) thrusterParticles.Stop();
 
 
     }

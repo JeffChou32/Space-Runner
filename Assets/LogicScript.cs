@@ -14,16 +14,19 @@ public class LogicScript : MonoBehaviour
     public Text highScore;
     public Text mult;
     public Color sample;
+    public RectTransform boostBar; 
+    public float baseBarWidth = 100f;    
 
     private void Start()
     {
         // Load the stored high score at the start of the game
         int storedHighScore = PlayerPrefs.GetInt("HighScore", 0); // Default is 0 if no score is saved
-        highScore.text = storedHighScore.ToString();
+        highScore.text = storedHighScore.ToString();        
     }
     void Update()
     {
         // Accumulate distance based on speed and time
+        var boostBarImage = boostBar.GetComponent<Image>();
         if (!isGameOver)
         {
             distance += speed * Time.deltaTime;
@@ -39,11 +42,23 @@ public class LogicScript : MonoBehaviour
             {
                 mult.text = $"x{shipscript.multiplier}";
                 mult.gameObject.SetActive(true);
-                if (shipscript.multiplier == 2) mult.color = new Color(216f/255f, 121f/255f, 26f/255f, 1);
-                if (shipscript.multiplier == 3) mult.color = Color.cyan;
-                if (shipscript.multiplier > 3) mult.color = Color.white;
+                if (shipscript.multiplier == 2)
+                {
+                    mult.color = new Color(216f / 255f, 121f / 255f, 26f / 255f, 1);
+                    boostBarImage.color = new Color(216f / 255f, 121f / 255f, 26f / 255f, 1);
+                }
+                if (shipscript.multiplier == 3)
+                {
+                    mult.color = Color.cyan;
+                    boostBarImage.color = Color.cyan;
+                }
+                if (shipscript.multiplier > 3)
+                {
+                    mult.color = Color.white;
+                    boostBarImage.color = Color.white;
+                }
 
-                mult.fontSize = 80 + (shipscript.multiplier - 1) * 10;
+                mult.fontSize = Mathf.Min(80 + (shipscript.multiplier - 1) * 10, 160);
             }
             else
             {
@@ -51,7 +66,8 @@ public class LogicScript : MonoBehaviour
                 mult.gameObject.SetActive(false); 
             }
         }
-               
+        boostBar.sizeDelta = new Vector2(shipscript.boostTimer * 50, boostBar.sizeDelta.y);      
+  
     }
 
     public void restartGame()

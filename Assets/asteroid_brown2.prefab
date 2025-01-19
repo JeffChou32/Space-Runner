@@ -177,3 +177,4 @@ MonoBehaviour:
   moveSpeed: 3.6
   deadZone: -20
   explodeRadius: 0
+  speedChangeRate: 3

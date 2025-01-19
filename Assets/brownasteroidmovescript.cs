@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class brownasteroidmovescript : MonoBehaviour
@@ -6,18 +7,17 @@ public class brownasteroidmovescript : MonoBehaviour
     private float originalMoveSpeed;
     public float deadZone = -20;
     public float explodeRadius = 0;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    
     void Start()
     {
-        originalMoveSpeed = moveSpeed;
+        originalMoveSpeed = moveSpeed;        
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
-        //if (shipscript.boost) explode();
-        moveSpeed = originalMoveSpeed * shipscript.multiplier;
+        moveSpeed = originalMoveSpeed * shipscript.multiplier;              
         transform.position = transform.position + (Vector3.down * moveSpeed) * Time.deltaTime;
+        
         if (transform.position.y < deadZone)
         {
             Debug.Log("Asteroid Deleted");
@@ -41,3 +41,5 @@ public class brownasteroidmovescript : MonoBehaviour
         }
     }
 }
+
+

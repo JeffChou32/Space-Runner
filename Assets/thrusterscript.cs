@@ -26,29 +26,31 @@ public class thrusterscript : MonoBehaviour
         {
             gameObject.SetActive(false);
         }
-        
+
+       
         var main = thrusterParticles.main;
         main.startLifetime = new ParticleSystem.MinMaxCurve(
             baseMinLifetime * shipscript.multiplier, 
             baseMaxLifetime * shipscript.multiplier);
 
         var shape = thrusterParticles.shape;
-        if (shipscript.multiplier > 1) shape.radius = baseShapeRadius * shipscript.multiplier/2;        
-        
+        if (shipscript.multiplier > 1) shape.radius = baseShapeRadius * shipscript.multiplier / 2;
+        else shape.radius = baseShapeRadius;
+
         main.simulationSpeed = baseSimulationSpeed * shipscript.multiplier;
 
         var colorOverLifetime = thrusterParticles.colorOverLifetime;
-        Gradient gradient = new Gradient();        
+        Gradient gradient = new Gradient();
         if (shipscript.multiplier > 3)
-        {            
+        {
             gradient.SetKeys(
                 new GradientColorKey[] {
-                    new GradientColorKey(Color.white, 0f), 
+                    new GradientColorKey(Color.black, 0f),
                     new GradientColorKey(Color.black, 1f)},
-                new GradientAlphaKey[] {new GradientAlphaKey(1f, 0f), new GradientAlphaKey(1f, 1f)}
+                new GradientAlphaKey[] { new GradientAlphaKey(1f, 0f), new GradientAlphaKey(1f, 1f) }
                 );
-            colorOverLifetime.color = new ParticleSystem.MinMaxGradient(gradient);
-        }
+            colorOverLifetime.color = new ParticleSystem.MinMaxGradient(gradient);            
+        } 
         else if (shipscript.multiplier > 2)
         {            
             gradient.SetKeys(
@@ -59,13 +61,14 @@ public class thrusterscript : MonoBehaviour
                 new GradientAlphaKey[] { new GradientAlphaKey(1f, 0f), new GradientAlphaKey(1f, 1f)}
                 );
             colorOverLifetime.color = new ParticleSystem.MinMaxGradient(gradient);
-        } else
+        } 
+        else
         {
             gradient.SetKeys(
                 new GradientColorKey[] {
                     new GradientColorKey(Color.yellow, 0f), 
                     new GradientColorKey(customOrange, 0.5f),
-                new GradientColorKey(Color.black, 1f)
+                    new GradientColorKey(Color.black, 1f)
                 },
                 new GradientAlphaKey[] { new GradientAlphaKey(1f, 0f), new GradientAlphaKey(1f, 1f) }
             );
