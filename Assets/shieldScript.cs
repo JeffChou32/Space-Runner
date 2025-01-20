@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class shieldScript : MonoBehaviour
@@ -66,5 +67,7 @@ public class shieldScript : MonoBehaviour
             colorOverLifetime.color = new ParticleSystem.MinMaxGradient(gradient);
         }    
         else if (shipscript.multiplier == 1) if (shield.isPlaying) shield.Stop();
-    }
+
+        if (!shipscript.boost && shield.isPlaying) shield.Stop();
+    }    
 }

@@ -25,6 +25,7 @@ public class shipscript : MonoBehaviour
 
     private float returnTime = 0f; // Total time for return
     private float elapsedReturnTime = 0f; // Time elapsed during return
+    private float decrementTimer = 0f;
 
     void Start()
     {        
@@ -48,18 +49,28 @@ public class shipscript : MonoBehaviour
     void Update()
     {
         // If waiting for return, calculate return time and decrement multiplier gradually
-        float targetYPosition = Mathf.Min(startingYPosition + multiplier - 1, maxYPosition);        
-        if (waitingForReturn)
-        {           
-            elapsedReturnTime += Time.deltaTime;            
-            float progress = Mathf.Clamp01(elapsedReturnTime / returnTime); // Gradually decrement multiplier based on elapsed return time
-            multiplier = Mathf.Max(1, Mathf.RoundToInt(Mathf.Lerp(multiplier, 1, progress)));            
-            if (Mathf.Approximately(transform.position.y, startingYPosition)) // Reset waitingForReturn when ship reaches starting position
+        //float targetYPosition = Mathf.Min(startingYPosition + multiplier - 1, maxYPosition);        
+        //if (waitingForReturn)
+        //{           
+        //    elapsedReturnTime += Time.deltaTime;            
+        //    float progress = Mathf.Clamp01(elapsedReturnTime / returnTime); // Gradually decrement multiplier based on elapsed return time
+        //    multiplier = Mathf.Max(1, Mathf.RoundToInt(Mathf.Lerp(multiplier, 1, progress)));            
+        //    if (Mathf.Approximately(transform.position.y, startingYPosition)) // Reset waitingForReturn when ship reaches starting position
+        //    {
+        //        waitingForReturn = false;
+        //        returnTime = 0f; 
+        //        elapsedReturnTime = 0f; 
+        //        multiplier = 1; 
+        //    }
+        //}
+        
+        if (!boost && multiplier > 1)
+        {
+            decrementTimer += Time.deltaTime; // Increment the timer
+            if (decrementTimer >= 0.5f)
             {
-                waitingForReturn = false;
-                returnTime = 0f; 
-                elapsedReturnTime = 0f; 
-                multiplier = 1; 
+                decrementTimer = 0f; // Reset the timer
+                multiplier -= 1; // Decrement the multiplier
             }
         }
 
@@ -78,12 +89,12 @@ public class shipscript : MonoBehaviour
                 //multiplier = 1;
                 boost = false;
                 waitingForReturn = true;
-                returnTime = Mathf.Abs(transform.position.y - startingYPosition) / 2f; // 2 is the move speed
-                elapsedReturnTime = 0f; // Reset elapsed time
+                //returnTime = Mathf.Abs(transform.position.y - startingYPosition) / 2f; // 2 is the move speed
+                //elapsedReturnTime = 0f; // Reset elapsed time
             }
         }
 
-        if (waitingForReturn && Mathf.Approximately(transform.position.y, startingYPosition)) waitingForReturn = false;
+        if (waitingForReturn && multiplier == 1) waitingForReturn = false;
         boost = boostTimer > 0;
 
         int defaultLayer = LayerMask.NameToLayer("Default"); //COLLISION LOGIC
