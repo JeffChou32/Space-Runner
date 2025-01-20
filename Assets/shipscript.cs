@@ -68,11 +68,8 @@ public class shipscript : MonoBehaviour
         int defaultLayer = LayerMask.NameToLayer("Default");
         int brownAsteroidLayer = LayerMask.NameToLayer("BrownAsteroid");
         int blueAsteroidLayer = LayerMask.NameToLayer("BlueAsteroid");
-        int whiteAsteroidLayer = LayerMask.NameToLayer("WhiteAsteroid");
-        
-        //Physics2D.IgnoreLayerCollision(defaultLayer, brownAsteroidLayer, multiplier >= 2);        
-        //Physics2D.IgnoreLayerCollision(defaultLayer, blueAsteroidLayer, multiplier >= 3);        
-        //Physics2D.IgnoreLayerCollision(defaultLayer, whiteAsteroidLayer, multiplier >= 4);
+        int whiteAsteroidLayer = LayerMask.NameToLayer("WhiteAsteroid");        
+      
         if (multiplier >= 2) Physics2D.IgnoreLayerCollision(defaultLayer, brownAsteroidLayer, true);         
         if (multiplier >= 3) Physics2D.IgnoreLayerCollision(defaultLayer, blueAsteroidLayer, true);                 
         if (multiplier >= 4) Physics2D.IgnoreLayerCollision(defaultLayer, whiteAsteroidLayer, true);        
