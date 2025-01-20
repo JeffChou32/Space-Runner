@@ -9,6 +9,9 @@ TagManager:
   - Speedboost
   - BrownAsteroid
   - BlueAsteroid
+  - AsteroidSpawner
+  - StarfieldSpawner
+  - SpeedSpawner
   layers:
   - Default
   - TransparentFX

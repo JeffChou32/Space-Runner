@@ -15,19 +15,17 @@ public class asteroidspawner : MonoBehaviour
     }
     
     void Update()
-    {
-        
+    {        
         if (lastSpawnedAsteroid != null && lastSpawnedAsteroid.transform.position.y <= spawnYThreshold)
         {
             spawnAsteroid();
         }
-
     }
     void spawnAsteroid()
     {
         float lowestPoint = transform.position.x - heightOffset;
         float highestPoint = transform.position.x + heightOffset;
         lastSpawnedAsteroid = Instantiate(asteroid, new Vector3(Random.Range(lowestPoint, highestPoint), transform.position.y, 0), transform.rotation);
-    }   
+    }  
 
 }
