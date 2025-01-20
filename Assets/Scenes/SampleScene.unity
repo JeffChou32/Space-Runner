@@ -918,7 +918,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   customBlue: {r: 0, g: 0.64735246, b: 1, a: 1}
-  customOrange: {r: 0.7372549, g: 0.42421177, b: 0, a: 1}
+  customOrange: {r: 0.8436657, g: 0.49772257, b: 0.030699342, a: 1}
 --- !u!1 &748329157
 GameObject:
   m_ObjectHideFlags: 0
@@ -1728,11 +1728,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5228344112536469250, guid: 7fa435d59e680994dbfeefccebb6bdd8, type: 3}
       propertyPath: InitialModule.maxNumParticles
-      value: 60
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 5228344112536469250, guid: 7fa435d59e680994dbfeefccebb6bdd8, type: 3}
       propertyPath: InitialModule.startSize.scalar
-      value: 1
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 5228344112536469250, guid: 7fa435d59e680994dbfeefccebb6bdd8, type: 3}
       propertyPath: VelocityModule.orbitalX.scalar

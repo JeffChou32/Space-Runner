@@ -23,6 +23,8 @@ public class shipscript : MonoBehaviour
     //public static bool boostOver = false;
     private bool waitingForReturn = false;
 
+    private float returnTime = 0f; // Total time for return
+    private float elapsedReturnTime = 0f; // Time elapsed during return
 
     void Start()
     {        
@@ -45,31 +47,49 @@ public class shipscript : MonoBehaviour
 
     void Update()
     {
-        
+        // If waiting for return, calculate return time and decrement multiplier gradually
+        float targetYPosition = Mathf.Min(startingYPosition + multiplier - 1, maxYPosition);        
+        if (waitingForReturn)
+        {           
+            elapsedReturnTime += Time.deltaTime;            
+            float progress = Mathf.Clamp01(elapsedReturnTime / returnTime); // Gradually decrement multiplier based on elapsed return time
+            multiplier = Mathf.Max(1, Mathf.RoundToInt(Mathf.Lerp(multiplier, 1, progress)));            
+            if (Mathf.Approximately(transform.position.y, startingYPosition)) // Reset waitingForReturn when ship reaches starting position
+            {
+                waitingForReturn = false;
+                returnTime = 0f; 
+                elapsedReturnTime = 0f; 
+                multiplier = 1; 
+            }
+        }
+
         transform.position = new Vector3(
-        transform.position.x,
-        Mathf.MoveTowards(transform.position.y, Mathf.Min(startingYPosition + multiplier - 1, maxYPosition), 2 * Time.deltaTime),
-        transform.position.z
-        );               
-    
+            transform.position.x,
+            Mathf.MoveTowards(transform.position.y, Mathf.Min(startingYPosition + multiplier - 1, maxYPosition), 2 * Time.deltaTime),
+            transform.position.z
+        );
+        
         if (boostTimer > 0)
         {
             boostTimer -= Time.deltaTime;
             if (boostTimer <= 0)
             {
-                boostTimer = 0;                
-                multiplier = 1;
+                boostTimer = 0;
+                //multiplier = 1;
                 boost = false;
                 waitingForReturn = true;
+                returnTime = Mathf.Abs(transform.position.y - startingYPosition) / 2f; // 2 is the move speed
+                elapsedReturnTime = 0f; // Reset elapsed time
             }
         }
-        if (waitingForReturn && Mathf.Approximately(transform.position.y, startingYPosition)) waitingForReturn = false;
 
-        int defaultLayer = LayerMask.NameToLayer("Default");
+        if (waitingForReturn && Mathf.Approximately(transform.position.y, startingYPosition)) waitingForReturn = false;
+        boost = boostTimer > 0;
+
+        int defaultLayer = LayerMask.NameToLayer("Default"); //COLLISION LOGIC
         int brownAsteroidLayer = LayerMask.NameToLayer("BrownAsteroid");
         int blueAsteroidLayer = LayerMask.NameToLayer("BlueAsteroid");
-        int whiteAsteroidLayer = LayerMask.NameToLayer("WhiteAsteroid");        
-      
+        int whiteAsteroidLayer = LayerMask.NameToLayer("WhiteAsteroid");             
         if (multiplier >= 2) Physics2D.IgnoreLayerCollision(defaultLayer, brownAsteroidLayer, true);         
         if (multiplier >= 3) Physics2D.IgnoreLayerCollision(defaultLayer, blueAsteroidLayer, true);                 
         if (multiplier >= 4) Physics2D.IgnoreLayerCollision(defaultLayer, whiteAsteroidLayer, true);        
@@ -80,9 +100,9 @@ public class shipscript : MonoBehaviour
             Physics2D.IgnoreLayerCollision(defaultLayer, whiteAsteroidLayer, false);
         }
 
-        boost = boostTimer > 0;
+        
 
-        if (Input.GetKey(KeyCode.LeftArrow) && shipIsAlive)
+        if (Input.GetKey(KeyCode.LeftArrow) && shipIsAlive) //KEYBINDS
         {
             animator.SetBool("left", true);
             animator.SetBool("right", false);
@@ -99,12 +119,9 @@ public class shipscript : MonoBehaviour
             velocityX *= friction;
             animator.SetBool("left", false);
             animator.SetBool("right", false);
-        }
-        // Limit the speed to avoid infinite acceleration
-        velocityX = Mathf.Clamp(velocityX, -maxSpeed, maxSpeed);
-        // Apply movement using Rigidbody2D
+        }        
+        velocityX = Mathf.Clamp(velocityX, -maxSpeed, maxSpeed);        
         myRigidBody.linearVelocity = new Vector2(velocityX, myRigidBody.linearVelocity.y);
-
         if (Input.GetKeyDown(KeyCode.UpArrow) && (speedBoosts > 0) && !waitingForReturn)
         {
             ActivateSpeedBoost();
