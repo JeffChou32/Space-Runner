@@ -20,7 +20,7 @@ public class shipscript : MonoBehaviour
     public Collider2D myCollider;    
     public static float boostTimer = 0f;
     public float maxYPosition = 5f;    
-    private bool waitingForReturn = false;       
+    public static bool waitingForReturn = false;       
     private float decrementTimer = 0f;
 
     void Start()
@@ -136,5 +136,11 @@ public class shipscript : MonoBehaviour
         logic.gameOver();
         shipIsAlive = false;        
     }
-    
+    public static void ActivateSpeedRamp()
+    {
+        boost = true;               
+        boostTimer += boostDuration;
+        multiplier += 1;
+    }
+
 }
