@@ -114,6 +114,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   asteroidPrefabs:
   - {fileID: 6302051134267672072, guid: 7cd4368b0dd15a541aa9254a30b9ded9, type: 3}
+  - {fileID: 240573913799621523, guid: 1e8a0aed076fd7c41be0c8373e885735, type: 3}
   heightOffset: 7
   spawnYThreshold: 8
 --- !u!1 &2833238336968206596
@@ -341,6 +342,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   asteroidPrefabs:
   - {fileID: 6302051134267672072, guid: 7cd4368b0dd15a541aa9254a30b9ded9, type: 3}
+  - {fileID: 240573913799621523, guid: 1e8a0aed076fd7c41be0c8373e885735, type: 3}
   heightOffset: 7
   spawnYThreshold: 8
 --- !u!1 &6938158904155893050
@@ -569,5 +571,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   asteroidPrefabs:
   - {fileID: 6302051134267672072, guid: 7cd4368b0dd15a541aa9254a30b9ded9, type: 3}
+  - {fileID: 240573913799621523, guid: 1e8a0aed076fd7c41be0c8373e885735, type: 3}
   heightOffset: 7
   spawnYThreshold: 8

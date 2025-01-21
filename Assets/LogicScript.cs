@@ -15,20 +15,23 @@ public class LogicScript : MonoBehaviour
     public Text mult;
     public Color sample;
     public RectTransform boostBar; 
-    public float baseBarWidth = 100f;    
+    public float baseBarWidth = 100f;
+    public Text currentSpeedtxt;
+    private Color defaultColor;
 
     private void Start()
     {
         // Load the stored high score at the start of the game
         int storedHighScore = PlayerPrefs.GetInt("HighScore", 0); // Default is 0 if no score is saved
-        highScore.text = storedHighScore.ToString();        
+        highScore.text = storedHighScore.ToString();
+        defaultColor = currentSpeedtxt.color;
     }
     void Update()
     {
         // Accumulate distance based on speed and time
         var boostBarImage = boostBar.GetComponent<Image>();
         if (!isGameOver)
-        {
+        {                        
             distance += speed * Time.deltaTime;
 
             // If 1 second has passed, increase score by speed
@@ -38,24 +41,32 @@ public class LogicScript : MonoBehaviour
                 scoreText.text = playerScore.ToString();
                 distance -= 1f;  // Reset timer
             }
+            float currentSpeed = speed * shipscript.multiplier; 
+            currentSpeedtxt.text = $"{currentSpeed:F0}";
             if (shipscript.multiplier > 1)
             {
                 mult.text = $"x{shipscript.multiplier}";
                 mult.gameObject.SetActive(true);
                 if (shipscript.multiplier == 2)
                 {
-                    mult.color = new Color(216f / 255f, 121f / 255f, 26f / 255f, 1);
-                    boostBarImage.color = new Color(216f / 255f, 121f / 255f, 26f / 255f, 1);
+                    Color color = new Color(216f / 255f, 121f / 255f, 26f / 255f, 1);
+                    mult.color = color;
+                    boostBarImage.color = color;
+                    currentSpeedtxt.color = color;
                 }
                 if (shipscript.multiplier == 3)
                 {
-                    mult.color = Color.cyan;
-                    boostBarImage.color = Color.cyan;
+                    Color color = new Color(79f / 255f, 153f / 255f, 207f / 255f, 1);
+                    mult.color = color;
+                    boostBarImage.color = color;
+                    currentSpeedtxt.color = color;
                 }
                 if (shipscript.multiplier > 3)
                 {
-                    mult.color = Color.white;
-                    boostBarImage.color = Color.white;
+                    Color color = new Color(202f / 255f, 230f / 255f, 255f / 255f, 1);
+                    mult.color = color; 
+                    boostBarImage.color = color;
+                    currentSpeedtxt.color = color;
                 }
 
                 mult.fontSize = Mathf.Min(80 + (shipscript.multiplier - 1) * 10, 160);
@@ -63,7 +74,8 @@ public class LogicScript : MonoBehaviour
             else
             {
                 mult.text = ""; // Clear the text
-                mult.gameObject.SetActive(false); 
+                mult.gameObject.SetActive(false);
+                currentSpeedtxt.color = defaultColor;
             }
         }
         boostBar.sizeDelta = new Vector2(shipscript.boostTimer * 50, boostBar.sizeDelta.y);      

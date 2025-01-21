@@ -81,7 +81,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 4504431147922872437, guid: d2e4d31f34edb2848b61b9b662293c92, type: 3}
+  m_Sprite: {fileID: -6022925496821782904, guid: c18afe5c28f3f234ca31d635879d4abd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -249,5 +249,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 1.2
-  deadZone: -20
-  explodeRadius: 0
+  deadZone: -6
+  explodeRadius: 1
+  explosionEffect: {fileID: 354518985068751939, guid: dd58f0426be53c646a2bd6cf4704a6ce, type: 3}

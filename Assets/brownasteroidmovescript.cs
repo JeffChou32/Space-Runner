@@ -7,7 +7,8 @@ public class brownasteroidmovescript : MonoBehaviour
     private float originalMoveSpeed;
     public float deadZone = -20;
     public float explodeRadius = 0;
-    
+    public GameObject explosionEffect;
+
     void Start()
     {
         originalMoveSpeed = moveSpeed;        
@@ -23,6 +24,7 @@ public class brownasteroidmovescript : MonoBehaviour
             Debug.Log("Asteroid Deleted");
             Destroy(gameObject);
         }
+        explode();
     }
     private void explode()
     {
@@ -31,11 +33,16 @@ public class brownasteroidmovescript : MonoBehaviour
         if (ship != null)
         {
             float distance = Vector3.Distance(transform.position, ship.transform.position);
+            int shipLayer = ship.gameObject.layer;
+            int asteroidLayer = gameObject.layer;
 
-            // Collect if within the radius, regardless of ship collider state
-            if (distance <= explodeRadius)
+            if (Physics2D.GetIgnoreLayerCollision(shipLayer, asteroidLayer) && distance <= explodeRadius)
             {
                 Debug.Log("Asteroid Exploded");
+                // Instantiate the explosion effect at the asteroid's position
+                Instantiate(explosionEffect, transform.position, Quaternion.identity);
+
+                // Destroy the asteroid
                 Destroy(gameObject);
             }
         }

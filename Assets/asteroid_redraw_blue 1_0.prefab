@@ -248,6 +248,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62737548e653eee4b843946cb23dff63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 1.8
-  deadZone: -20
-  explodeRadius: 0
+  moveSpeed: 1.6
+  deadZone: -6
+  explodeRadius: 1
+  explosionEffect: {fileID: 3595101539476668414, guid: 16f0ba86bfaee9641b3408783065041c, type: 3}
