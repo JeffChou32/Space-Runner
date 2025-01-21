@@ -52,34 +52,36 @@ public class LogicScript : MonoBehaviour
                     Color color = new Color(216f / 255f, 121f / 255f, 26f / 255f, 1);
                     mult.color = color;
                     boostBarImage.color = color;
-                    currentSpeedtxt.color = color;
+                    //scoreText.color = color;
+                    //currentSpeedtxt.color = color;
                 }
                 if (shipscript.multiplier == 3)
                 {
                     Color color = new Color(79f / 255f, 153f / 255f, 207f / 255f, 1);
                     mult.color = color;
                     boostBarImage.color = color;
-                    currentSpeedtxt.color = color;
+                    //scoreText.color = color;
+                    //currentSpeedtxt.color = color;
                 }
                 if (shipscript.multiplier > 3)
                 {
                     Color color = new Color(202f / 255f, 230f / 255f, 255f / 255f, 1);
                     mult.color = color; 
                     boostBarImage.color = color;
-                    currentSpeedtxt.color = color;
+                    //scoreText.color = color;
+                    //currentSpeedtxt.color = color;
                 }
-
                 mult.fontSize = Mathf.Min(80 + (shipscript.multiplier - 1) * 10, 160);
             }
             else
             {
                 mult.text = ""; // Clear the text
                 mult.gameObject.SetActive(false);
-                currentSpeedtxt.color = defaultColor;
+                //currentSpeedtxt.color = defaultColor;
+                //scoreText.color = defaultColor;
             }
         }
         boostBar.sizeDelta = new Vector2(shipscript.boostTimer * 50, boostBar.sizeDelta.y);      
-  
     }
 
     public void restartGame()
