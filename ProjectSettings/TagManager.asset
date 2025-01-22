@@ -12,6 +12,7 @@ TagManager:
   - AsteroidSpawner
   - StarfieldSpawner
   - SpeedSpawner
+  - SpeedRampSpawner
   layers:
   - Default
   - TransparentFX

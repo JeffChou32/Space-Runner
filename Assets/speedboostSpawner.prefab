@@ -45,5 +45,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedBoost: {fileID: 889187822318032293, guid: 3e6a744b9cb40b540b36f761f735a161, type: 3}
-  spawnRate: 10
-  heightOffset: 6
+  spawnRate: 20
+  heightOffset: 7

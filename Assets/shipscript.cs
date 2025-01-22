@@ -123,6 +123,7 @@ public class shipscript : MonoBehaviour
     {
         boost = true;
         speedBoosts -= 1;
+        speedhud.boosts -= 1;
         numBoosts.text = speedBoosts.ToString();
         boostTimer += boostDuration;
         multiplier += 1;        
@@ -141,6 +142,5 @@ public class shipscript : MonoBehaviour
         boost = true;               
         boostTimer += boostDuration;
         multiplier += 1;
-    }
-
+    }     
 }

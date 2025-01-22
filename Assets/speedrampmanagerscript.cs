@@ -1,8 +1,8 @@
 using UnityEngine;
 
-public class StarfieldManagerScript : MonoBehaviour
+public class speedrampmanagerscript : MonoBehaviour
 {
-    public GameObject starfieldSpawnerPrefab; // Reference to the spawner prefab    
+    public GameObject speedSpawnerPrefab; // Reference to the spawner prefab    
     public Transform ship; // Reference to the ship
     public float spawnThreshold = 15f; // Distance from the ship to trigger new spawners
     public float spawnerSpacing = 30f; // Distance between consecutive spawners
@@ -15,8 +15,8 @@ public class StarfieldManagerScript : MonoBehaviour
     {
         lastSpawnedXLeft = ship.position.x - spawnerSpacing;
         lastSpawnedXRight = ship.position.x + spawnerSpacing;
-        Instantiate(starfieldSpawnerPrefab, new Vector3(lastSpawnedXLeft, transform.position.y, 0), Quaternion.identity);
-        Instantiate(starfieldSpawnerPrefab, new Vector3(lastSpawnedXRight, transform.position.y, 0), Quaternion.identity);
+        Instantiate(speedSpawnerPrefab, new Vector3(lastSpawnedXLeft, transform.position.y, 0), Quaternion.identity);
+        Instantiate(speedSpawnerPrefab, new Vector3(lastSpawnedXRight, transform.position.y, 0), Quaternion.identity);
     }
 
     // Update is called once per frame
@@ -25,19 +25,19 @@ public class StarfieldManagerScript : MonoBehaviour
         if (ship.position.x < lastSpawnedXLeft - spawnThreshold)
         {
             lastSpawnedXLeft -= spawnerSpacing;
-            Instantiate(starfieldSpawnerPrefab, new Vector3(lastSpawnedXLeft, transform.position.y, 0), Quaternion.identity);
+            Instantiate(speedSpawnerPrefab, new Vector3(lastSpawnedXLeft, transform.position.y, 0), Quaternion.identity);
         }
 
         if (ship.position.x > lastSpawnedXRight + spawnThreshold)
         {
             lastSpawnedXRight += spawnerSpacing;
-            Instantiate(starfieldSpawnerPrefab, new Vector3(lastSpawnedXRight, transform.position.y, 0), Quaternion.identity);
+            Instantiate(speedSpawnerPrefab, new Vector3(lastSpawnedXRight, transform.position.y, 0), Quaternion.identity);
         }
         DestroySpawnersOutOfRange();
     }
     void DestroySpawnersOutOfRange()
     {
-        GameObject[] spawners = GameObject.FindGameObjectsWithTag("StarfieldSpawner");
+        GameObject[] spawners = GameObject.FindGameObjectsWithTag("SpeedRampSpawner");
 
         foreach (GameObject spawner in spawners)
         {
@@ -49,6 +49,4 @@ public class StarfieldManagerScript : MonoBehaviour
             }
         }
     }
-
-
 }

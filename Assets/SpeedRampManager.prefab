@@ -46,6 +46,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedSpawnerPrefab: {fileID: 7656761459957382133, guid: 7b2065a7d51b6c34cb7a9ebdd279eee5, type: 3}
   ship: {fileID: 0}
-  spawnThreshold: 2
-  spawnerSpacing: 1
+  spawnThreshold: 3.5
+  spawnerSpacing: 7
   despawnDistance: 15

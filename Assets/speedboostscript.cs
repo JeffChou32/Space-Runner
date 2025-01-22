@@ -23,14 +23,15 @@ public class speedboostscript : MonoBehaviour
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
-    {        
+    {
         shipscript ship = collision.GetComponent<shipscript>();
 
         if (ship != null)
         {
             ship.speedBoosts += 1;
+            speedhud.boosts += 1;
             ship.numBoosts.text = ship.speedBoosts.ToString();
-            Destroy(gameObject); 
+            Destroy(gameObject);
         }
     }    
 }
