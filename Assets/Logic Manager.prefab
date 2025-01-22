@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &7120589300839978124
+--- !u!1 &7164752512914082296
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,44 +8,51 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7621704829927670982}
-  - component: {fileID: 2584739857238167607}
+  - component: {fileID: 8958109341959986348}
+  - component: {fileID: 1431644691590330825}
   m_Layer: 0
-  m_Name: AsteroidManager
-  m_TagString: Untagged
+  m_Name: Logic Manager
+  m_TagString: Logic
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7621704829927670982
+--- !u!4 &8958109341959986348
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7120589300839978124}
+  m_GameObject: {fileID: 7164752512914082296}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.20354459, z: -0.1688201}
+  m_LocalPosition: {x: 247.53862, y: 843.0397, z: -10.990502}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2584739857238167607
+--- !u!114 &1431644691590330825
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7120589300839978124}
+  m_GameObject: {fileID: 7164752512914082296}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 95f71e49e94d21c4fb0a821a6711d2eb, type: 3}
+  m_Script: {fileID: 11500000, guid: 0f6d44d45f6cc2d48bd1d0310f842ec7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  asteroidSpawnerPrefab: {fileID: 5382618719502933399, guid: 9a2ae02567ba14340982baced08496e9, type: 3}
-  ship: {fileID: 0}
-  spawnThreshold: 21
-  spawnerSpacing: 21
-  despawnDistance: 40
+  playerScore: 6
+  scoreText: {fileID: 0}
+  speed: 12
+  distance: 0
+  gameOverScreen: {fileID: 0}
+  isGameOver: 0
+  highScore: {fileID: 0}
+  mult: {fileID: 0}
+  sample: {r: 0.3094389, g: 0.59960294, b: 0.81132066, a: 1}
+  boostBar: {fileID: 0}
+  baseBarWidth: 100
+  currentSpeedtxt: {fileID: 0}

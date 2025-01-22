@@ -13,8 +13,8 @@ public class StarfieldManagerScript : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        lastSpawnedXLeft = ship.position.x - spawnerSpacing;
-        lastSpawnedXRight = ship.position.x + spawnerSpacing;
+        lastSpawnedXLeft = Mathf.Floor(ship.position.x / spawnerSpacing) * spawnerSpacing - spawnerSpacing;
+        lastSpawnedXRight = Mathf.Floor(ship.position.x / spawnerSpacing) * spawnerSpacing + spawnerSpacing;
         Instantiate(starfieldSpawnerPrefab, new Vector3(lastSpawnedXLeft, transform.position.y, 0), Quaternion.identity);
         Instantiate(starfieldSpawnerPrefab, new Vector3(lastSpawnedXRight, transform.position.y, 0), Quaternion.identity);
     }

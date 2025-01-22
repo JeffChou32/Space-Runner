@@ -46,6 +46,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   starfieldSpawnerPrefab: {fileID: 1408374857103278225, guid: fe1d4e10b838e564998441d249cf7f8b, type: 3}
   ship: {fileID: 0}
-  spawnThreshold: 0
-  spawnerSpacing: 5
-  despawnDistance: 10
+  spawnThreshold: 2.8
+  spawnerSpacing: 5.9
+  despawnDistance: 15

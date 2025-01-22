@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5001080163000167031}
   - component: {fileID: 8264336450108149927}
-  - component: {fileID: 8332827823702186448}
   - component: {fileID: 5915414638678193096}
   - component: {fileID: 2292216309262385318}
   - component: {fileID: 4735779870525465663}
@@ -80,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -4
-  m_Sprite: {fileID: -9162773824726545074, guid: 11705a36e65c33745bfe26ebeb150a0d, type: 3}
+  m_Sprite: {fileID: 7080683406114947607, guid: 45f506735e8b3e74bb4fd80a5c7d7241, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -91,42 +90,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!58 &8332827823702186448
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 140843989921523991}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_ForceSendLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ForceReceiveLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_ContactCaptureLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_CallbackLayers:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_CompositeOperation: 0
-  m_CompositeOrder: 0
-  m_Offset: {x: -0.46, y: 0.4}
-  m_Radius: 1.15
 --- !u!58 &5915414638678193096
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -161,8 +124,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.48, y: -0.59}
-  m_Radius: 1.04
+  m_Offset: {x: -0.2, y: -0.16}
+  m_Radius: 1.67
 --- !u!58 &2292216309262385318
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -197,8 +160,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: -0.18, y: 0}
-  m_Radius: 1.26
+  m_Offset: {x: 0.36, y: 0.4}
+  m_Radius: 1.55
 --- !u!114 &4735779870525465663
 MonoBehaviour:
   m_ObjectHideFlags: 0
