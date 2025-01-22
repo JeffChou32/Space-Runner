@@ -11,7 +11,7 @@ public class shipscript : MonoBehaviour
     public LogicScript logic;
     public static bool shipIsAlive = true;
     public static bool boost = false;        
-    public static float boostDuration = 3f;            
+    public static float boostDuration = 4f;            
     public static int multiplier = 1;    
     public Text numBoosts;
     public int speedBoosts;

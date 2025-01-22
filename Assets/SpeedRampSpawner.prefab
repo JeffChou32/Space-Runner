@@ -45,6 +45,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedRamp: {fileID: 1567081391449098261, guid: a5743b3ec27f8614c8efcb7a5b59087f, type: 3}
-  minSpawnRate: 1
-  maxSpawnRate: 5
-  heightOffset: 7
+  minSpawnRate: 2
+  maxSpawnRate: 8
+  heightOffset: 3

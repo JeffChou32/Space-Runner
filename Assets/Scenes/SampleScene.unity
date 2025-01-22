@@ -2950,8 +2950,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speedSpawnerPrefab: {fileID: 7656761459957382133, guid: 7b2065a7d51b6c34cb7a9ebdd279eee5, type: 3}
   ship: {fileID: 749571689}
-  spawnThreshold: 7
-  spawnerSpacing: 7
+  spawnThreshold: 5
+  spawnerSpacing: 3
   despawnDistance: 15
 --- !u!1 &1444349036
 GameObject:
@@ -4264,6 +4264,10 @@ PrefabInstance:
     - target: {fileID: 7120589300839978124, guid: 25ed816e815f71a4c95e0b880283ca24, type: 3}
       propertyPath: m_Name
       value: AsteroidManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 7120589300839978124, guid: 25ed816e815f71a4c95e0b880283ca24, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7621704829927670982, guid: 25ed816e815f71a4c95e0b880283ca24, type: 3}
       propertyPath: m_LocalPosition.x
