@@ -44,35 +44,42 @@ public class shipscript : MonoBehaviour
     }
 
     void Update()
-    {               
-        if (!boost && multiplier > 1)
-        {
-            decrementTimer += Time.deltaTime; // Increment the timer
-            if (decrementTimer >= 0.5f)
-            {
-                decrementTimer = 0f; // Reset the timer
-                multiplier -= 1; // Decrement the multiplier
-            }
-        }
-        if (multiplier > 1)
-        {
-            transform.position = new Vector3(
-                transform.position.x,
-                Mathf.MoveTowards(transform.position.y, Mathf.Min(startingYPosition + multiplier - 2, maxYPosition), 2 * Time.deltaTime),
-                transform.position.z
-            );
-        }
-        
-        if (boostTimer > 0)
+    {
+        if (boostTimer > 0) //BOOST LOGIC
         {
             boostTimer -= Time.deltaTime;
             if (boostTimer <= 0)
             {
-                boostTimer = 0;                
+                boostTimer = 0;
                 boost = false;
-                waitingForReturn = true;                
+                waitingForReturn = true;
             }
         }
+
+        if (!boost && multiplier > 1) //GRADUAL SLOWDOWN
+        {
+            decrementTimer += Time.deltaTime; 
+            if (decrementTimer >= 0.5f)
+            {
+                decrementTimer = 0f; 
+                multiplier -= 1; 
+            }
+        }
+
+        float displacement = .25f * (multiplier-1); //SHIP DISPLACEMENT UNDER BOOST 
+        if (waitingForReturn)
+        {
+            transform.position = new Vector3(
+                transform.position.x,
+                Mathf.MoveTowards(transform.position.y, startingYPosition, 1.5f * Time.deltaTime),
+                transform.position.z);
+        } else
+        {
+            transform.position = new Vector3(
+                transform.position.x,
+                Mathf.MoveTowards(transform.position.y, Mathf.Min(startingYPosition + displacement, maxYPosition), 1.5f * Time.deltaTime),
+                transform.position.z);
+        }                          
 
         if (waitingForReturn && multiplier == 1) waitingForReturn = false;
         boost = boostTimer > 0;
@@ -89,17 +96,15 @@ public class shipscript : MonoBehaviour
             Physics2D.IgnoreLayerCollision(defaultLayer, brownAsteroidLayer, false);
             Physics2D.IgnoreLayerCollision(defaultLayer, blueAsteroidLayer, false);
             Physics2D.IgnoreLayerCollision(defaultLayer, whiteAsteroidLayer, false);
-        }
+        }        
 
-        
-
-        if (Input.GetKey(KeyCode.LeftArrow) && shipIsAlive) //KEYBINDS
+        if (Input.GetKey(KeyCode.A) && shipIsAlive) //KEYBINDS
         {
             animator.SetBool("left", true);
             animator.SetBool("right", false);
             velocityX -= acceleration * Time.deltaTime;
         }        
-        else if (Input.GetKey(KeyCode.RightArrow) && shipIsAlive)
+        else if (Input.GetKey(KeyCode.D) && shipIsAlive)
         {
             velocityX += acceleration * Time.deltaTime;
             animator.SetBool("left", false);
@@ -113,7 +118,7 @@ public class shipscript : MonoBehaviour
         }        
         velocityX = Mathf.Clamp(velocityX, -maxSpeed, maxSpeed);        
         myRigidBody.linearVelocity = new Vector2(velocityX, myRigidBody.linearVelocity.y);
-        if (Input.GetKeyDown(KeyCode.UpArrow) && (speedBoosts > 0) && !waitingForReturn)
+        if (Input.GetKeyDown(KeyCode.W) && (speedBoosts > 0) && !waitingForReturn)
         {
             ActivateSpeedBoost();
         }
