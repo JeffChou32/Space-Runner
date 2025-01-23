@@ -70,8 +70,7 @@ public class shipscript : MonoBehaviour
             {
                 boostTimer = 0;                
                 boost = false;
-                waitingForReturn = true;
-                
+                waitingForReturn = true;                
             }
         }
 

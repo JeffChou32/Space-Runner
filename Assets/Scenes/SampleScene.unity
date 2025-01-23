@@ -1755,7 +1755,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myRigidBody: {fileID: 749571685}
-  acceleration: 7
+  acceleration: 6
   maxSpeed: 3
   friction: 1
   logic: {fileID: 0}
@@ -1763,7 +1763,7 @@ MonoBehaviour:
   speedBoosts: 0
   animator: {fileID: 749571690}
   myCollider: {fileID: 749571687}
-  maxYPosition: 1
+  maxYPosition: 0
 --- !u!58 &749571687
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1844,7 +1844,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: -1751091553507245027, guid: 4eb711b163cc3524795b5f44f3ec2fe2, type: 3}
+  m_Sprite: {fileID: 5567996902077622327, guid: 2a26cc012c5ac2c4f88f16adcecacf17, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3920,15 +3920,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -3957692511846245250, guid: 7b2065a7d51b6c34cb7a9ebdd279eee5, type: 3}
       propertyPath: heightOffset
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -3957692511846245250, guid: 7b2065a7d51b6c34cb7a9ebdd279eee5, type: 3}
       propertyPath: maxSpawnRate
-      value: 7
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: -3957692511846245250, guid: 7b2065a7d51b6c34cb7a9ebdd279eee5, type: 3}
       propertyPath: minSpawnRate
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4315190715772623670, guid: 7b2065a7d51b6c34cb7a9ebdd279eee5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4105,6 +4105,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 626170504363151618, guid: 9a2ae02567ba14340982baced08496e9, type: 3}
+      propertyPath: spawnYThreshold
+      value: 8.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1655906828974270683, guid: 9a2ae02567ba14340982baced08496e9, type: 3}
+      propertyPath: spawnYThreshold
+      value: 8.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 1947214417183749471, guid: 9a2ae02567ba14340982baced08496e9, type: 3}
+      propertyPath: spawnYThreshold
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 4714154066516818406, guid: 9a2ae02567ba14340982baced08496e9, type: 3}
+      propertyPath: spawnYThreshold
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 5382618719502933399, guid: 9a2ae02567ba14340982baced08496e9, type: 3}
       propertyPath: m_Name
       value: AsteroidSpawner
@@ -4133,7 +4149,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2138616078
 Transform:
   m_ObjectHideFlags: 0

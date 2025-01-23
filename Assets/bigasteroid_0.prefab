@@ -125,7 +125,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: -0.2, y: -0.16}
-  m_Radius: 1.67
+  m_Radius: 1.55
 --- !u!58 &2292216309262385318
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -161,7 +161,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0.36, y: 0.4}
-  m_Radius: 1.55
+  m_Radius: 1.44
 --- !u!114 &4735779870525465663
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -174,7 +174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62737548e653eee4b843946cb23dff63, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveSpeed: 1
+  moveSpeed: 1.2
   deadZone: -7
   explodeRadius: 2
-  explosionEffect: {fileID: 354518985068751939, guid: dd58f0426be53c646a2bd6cf4704a6ce, type: 3}
+  explosionEffect: {fileID: 2214741249234361341, guid: b90d998f440175042970af09c88dd116, type: 3}

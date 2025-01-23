@@ -1,10 +1,16 @@
 fileFormatVersion: 2
-guid: 45f506735e8b3e74bb4fd80a5c7d7241
+guid: 2a26cc012c5ac2c4f88f16adcecacf17
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7080683406114947607
-    second: bigwhite_0
+      213: 5567996902077622327
+    second: shiprevisedgrey_0
+  - first:
+      213: -5939682760017161064
+    second: shiprevisedgrey_1
+  - first:
+      213: 5558743503460580807
+    second: shiprevisedgrey_2
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,23 +119,67 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: bigwhite_0
+      name: shiprevisedgrey_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 8
-        width: 120
-        height: 120
+        x: 8
+        y: 6
+        width: 16
+        height: 21
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7120c74fa04a34260800000000000000
-      internalID: 7080683406114947607
+      spriteID: 738efc29eaf754d40800000000000000
+      internalID: 5567996902077622327
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shiprevisedgrey_1
+      rect:
+        serializedVersion: 2
+        x: 41
+        y: 6
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8945aa2eff1029da0800000000000000
+      internalID: -5939682760017161064
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: shiprevisedgrey_2
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 6
+        width: 14
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7cd3741d3cf942d40800000000000000
+      internalID: 5558743503460580807
       vertices: []
       indices: 
       edges: []
@@ -138,7 +188,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 74d230c4f3b3438499b98d8f41e90a71
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -148,7 +198,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      bigwhite_0: 7080683406114947607
+      shiprevisedgrey_0: 5567996902077622327
+      shiprevisedgrey_1: -5939682760017161064
+      shiprevisedgrey_2: 5558743503460580807
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

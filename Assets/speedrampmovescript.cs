@@ -2,7 +2,9 @@ using UnityEngine;
 
 public class speedrampmovescript : MonoBehaviour
 {
-    public float moveSpeed = 5;
+    public float minMoveSpeed = 3f; // Minimum move speed
+    public float maxMoveSpeed = 7f; // Maximum move speed
+    private float moveSpeed;
     public float deadZone = -20;
     private static float originalMoveSpeed;
     private bool isInsideCollider = false; // Tracks whether the ship is inside the collider
@@ -10,13 +12,14 @@ public class speedrampmovescript : MonoBehaviour
 
     void Start()
     {
+        moveSpeed = Random.Range(minMoveSpeed, maxMoveSpeed);
         originalMoveSpeed = moveSpeed;
     }
        
     void Update()
     {
-        moveSpeed = originalMoveSpeed * shipscript.multiplier;
-        transform.position = transform.position + (Vector3.down * moveSpeed) * Time.deltaTime;        
+        float currentSpeed = originalMoveSpeed * shipscript.multiplier;
+        transform.position = transform.position + (Vector3.down * currentSpeed) * Time.deltaTime;        
         if (transform.position.y < deadZone)
         {
             Debug.Log("speedboost Deleted");
