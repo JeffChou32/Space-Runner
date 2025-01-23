@@ -189,7 +189,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Astro Runner
+  m_Text: Astral Ascent
 --- !u!222 &59413950
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -897,7 +897,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: -10.67}
-  m_SizeDelta: {x: 169.18, y: 81.7}
+  m_SizeDelta: {x: 217, y: 90}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1890257132
 MonoBehaviour:
@@ -1152,8 +1152,8 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40
-  m_fontSizeBase: 40
+  m_fontSize: 45
+  m_fontSizeBase: 45
   m_fontWeight: 400
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
