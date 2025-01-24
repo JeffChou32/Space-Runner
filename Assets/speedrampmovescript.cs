@@ -9,6 +9,10 @@ public class speedrampmovescript : MonoBehaviour
     private static float originalMoveSpeed;
     private bool isInsideCollider = false; // Tracks whether the ship is inside the collider
     private shipscript ship;
+    public AudioClip thrusterSound;
+    public AudioClip thrusterSound2;
+    public AudioClip thrusterSound3;
+    public float soundVolume = 1.0f;
 
     void Start()
     {
@@ -27,7 +31,10 @@ public class speedrampmovescript : MonoBehaviour
         }
         if (isInsideCollider && ship != null && Input.GetKeyDown(KeyCode.Space) && !shipscript.waitingForReturn)
         {
-            shipscript.ActivateSpeedRamp();           
+            shipscript.ActivateSpeedRamp();
+            if (shipscript.multiplier == 2) AudioSource.PlayClipAtPoint(thrusterSound, transform.position, soundVolume);
+            if (shipscript.multiplier == 3) AudioSource.PlayClipAtPoint(thrusterSound2, transform.position, soundVolume);
+            if (shipscript.multiplier >= 4) AudioSource.PlayClipAtPoint(thrusterSound3, transform.position, soundVolume);
         }
     }
 

@@ -21,7 +21,12 @@ public class shipscript : MonoBehaviour
     public static float boostTimer = 0f;
     public float maxYPosition = 5f;    
     public static bool waitingForReturn = false;       
-    private float decrementTimer = 0f;    
+    private float decrementTimer = 0f;
+    public AudioClip explosionSound; 
+    public float soundVolume = 1.0f;
+    public AudioClip thrusterSound;
+    public AudioClip thrusterSound2;
+    public AudioClip thrusterSound3;
 
     void Start()
     {        
@@ -130,13 +135,17 @@ public class shipscript : MonoBehaviour
         speedhud.boosts -= 1;
         numBoosts.text = speedBoosts.ToString();
         boostTimer += boostDuration;
-        multiplier += 1;        
+        multiplier += 1;
+        if (multiplier == 2) AudioSource.PlayClipAtPoint(thrusterSound, transform.position, soundVolume);
+        if (multiplier == 3) AudioSource.PlayClipAtPoint(thrusterSound2, transform.position, soundVolume);
+        if (multiplier >= 4) AudioSource.PlayClipAtPoint(thrusterSound3, transform.position, soundVolume);
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
     {        
         animator.SetTrigger("death");
         myCollider.enabled = false;
+        AudioSource.PlayClipAtPoint(explosionSound, transform.position, soundVolume);
         Destroy(gameObject, 1f);
         logic.gameOver();
         shipIsAlive = false;        

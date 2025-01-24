@@ -1,0 +1,30 @@
+fileFormatVersion: 2
+guid: e553e6ed5969942438d7327a51b9e068
+AudioImporter:
+  externalObjects: {}
+  serializedVersion: 7
+  defaultSettings:
+    serializedVersion: 2
+    loadType: 0
+    sampleRateSetting: 0
+    sampleRateOverride: 44100
+    compressionFormat: 1
+    quality: 1
+    conversionMode: 0
+    preloadAudioData: 0
+  platformSettingOverrides: {}
+  forceToMono: 0
+  normalize: 1
+  loadInBackground: 0
+  ambisonic: 0
+  3D: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 289649
+  packageName: Heavy 8-bit Explosions Sounds
+  packageVersion: 1.0
+  assetPath: Assets/Heavy_8-bit_Explosion_Sounds/Short/8bit_expl_short_03.wav
+  uploadId: 682115

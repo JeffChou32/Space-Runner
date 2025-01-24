@@ -186,6 +186,10 @@ MonoBehaviour:
   minMoveSpeed: 1
   maxMoveSpeed: 4
   deadZone: -6
+  thrusterSound: {fileID: 8300000, guid: c5377a5bda395ec4294b5fa8819ca9c6, type: 3}
+  thrusterSound2: {fileID: 8300000, guid: 95202c024b882ed45a724fe3905100c7, type: 3}
+  thrusterSound3: {fileID: 8300000, guid: bbe7d0488d9f1a34eadae1885ab7c598, type: 3}
+  soundVolume: 1
 --- !u!1 &2265265996752159123
 GameObject:
   m_ObjectHideFlags: 0

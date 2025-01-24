@@ -178,3 +178,5 @@ MonoBehaviour:
   deadZone: -6
   explodeRadius: 1
   explosionEffect: {fileID: 2765518358366525078, guid: 715c37ce81b2cd2489eae696ca5d595d, type: 3}
+  explosionSound: {fileID: 8300000, guid: 80ca4773e2027024aa5386b4278b65aa, type: 3}
+  soundVolume: 1

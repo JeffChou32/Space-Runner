@@ -105,6 +105,8 @@ MonoBehaviour:
   deadZone: -6
   explodeRadius: 1
   explosionEffect: {fileID: 3595101539476668414, guid: 16f0ba86bfaee9641b3408783065041c, type: 3}
+  explosionSound: {fileID: 8300000, guid: e93d5cbd4a12fe540a2b627c99c00b85, type: 3}
+  soundVolume: 0.6
 --- !u!58 &5266414295147637062
 CircleCollider2D:
   m_ObjectHideFlags: 0

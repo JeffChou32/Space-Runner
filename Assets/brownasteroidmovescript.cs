@@ -8,6 +8,8 @@ public class brownasteroidmovescript : MonoBehaviour
     public float deadZone = -20;
     public float explodeRadius = 0;
     public GameObject explosionEffect;
+    public AudioClip explosionSound; 
+    public float soundVolume = 1.0f;
 
     void Start()
     {
@@ -39,6 +41,7 @@ public class brownasteroidmovescript : MonoBehaviour
             if (Physics2D.GetIgnoreLayerCollision(shipLayer, asteroidLayer) && distance <= explodeRadius)
             {
                 Debug.Log("Asteroid Exploded");
+                AudioSource.PlayClipAtPoint(explosionSound, transform.position, soundVolume);
                 // Instantiate the explosion effect at the asteroid's position
                 Instantiate(explosionEffect, transform.position, Quaternion.identity);
 
