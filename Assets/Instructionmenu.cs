@@ -4,7 +4,10 @@ using UnityEngine.SceneManagement;
 
 public class Instructionmenu : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private void Update()
+    {
+       
+    }
     public void StartGame()
     {
         SceneManager.LoadSceneAsync(2);
