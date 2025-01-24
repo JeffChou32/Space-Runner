@@ -2,6 +2,7 @@ using JetBrains.Annotations;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class LogicScript : MonoBehaviour
 {
@@ -17,21 +18,24 @@ public class LogicScript : MonoBehaviour
     public RectTransform boostBar; 
     public float baseBarWidth = 100f;
     public Text currentSpeedtxt;
-    //private Color defaultColor;
+    public Text timerText;
+    public float elapsedTime = 0f;
+    public Text warning;    
 
     private void Start()
     {        
         int storedHighScore = PlayerPrefs.GetInt("HighScore", 0); 
-        highScore.text = storedHighScore.ToString();
-        //defaultColor = currentSpeedtxt.color;
+        highScore.text = storedHighScore.ToString();        
     }
     void Update()
     {
         // Accumulate distance based on speed and time
         var boostBarImage = boostBar.GetComponent<Image>();
         if (!isGameOver)
-        {                        
+        {
+            elapsedTime += Time.deltaTime;
             distance += speed * Time.deltaTime;
+            warning.gameObject.SetActive(shipscript.waitingForReturn);
 
             // If 1 second has passed, increase score by speed
             while (distance >= 1f)
@@ -72,7 +76,8 @@ public class LogicScript : MonoBehaviour
                 mult.gameObject.SetActive(false);                
             }
         }
-        boostBar.sizeDelta = new Vector2(shipscript.boostTimer * 50, boostBar.sizeDelta.y);      
+        boostBar.sizeDelta = new Vector2(shipscript.boostTimer * 50, boostBar.sizeDelta.y);        
+        timerText.text = FormatTime(elapsedTime);
     }
 
     public void restartGame()
@@ -100,4 +105,10 @@ public class LogicScript : MonoBehaviour
         PlayerPrefs.DeleteKey("HighScore");
         PlayerPrefs.Save();  // Ensures the data is cleared from disk
     }
+    private string FormatTime(float time)
+    {
+        int minutes = Mathf.FloorToInt(time / 60); // Get minutes
+        int seconds = Mathf.FloorToInt(time % 60); // Get seconds
+        return string.Format("{0:00}:{1:00}", minutes, seconds);
+    }    
 }
