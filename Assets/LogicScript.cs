@@ -26,8 +26,9 @@ public class LogicScript : MonoBehaviour
 
     private void Start()
     {        
-        int storedHighScore = PlayerPrefs.GetInt("HighScore", 0); 
-        highScore.text = storedHighScore.ToString();
+        int storedHighScore = PlayerPrefs.GetInt("HighScore", 0);
+        if (storedHighScore == 0) highScore.text ="n/a";
+        else highScore.text = storedHighScore.ToString();
         playerScore = 0;
     }
     void Update()

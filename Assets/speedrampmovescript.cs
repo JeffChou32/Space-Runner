@@ -5,8 +5,7 @@ public class speedrampmovescript : MonoBehaviour
     public float minMoveSpeed = 3f; // Minimum move speed
     public float maxMoveSpeed = 7f; // Maximum move speed
     private float moveSpeed = 0;
-    public float deadZone = -20;
-    private static float originalMoveSpeed;
+    public float deadZone = -20;    
     private bool isInsideCollider = false; // Tracks whether the ship is inside the collider
     private shipscript ship;
     public AudioClip thrusterSound;
@@ -16,13 +15,12 @@ public class speedrampmovescript : MonoBehaviour
 
     void Start()
     {
-        moveSpeed = Random.Range(minMoveSpeed, maxMoveSpeed);
-        originalMoveSpeed = moveSpeed;
+        moveSpeed = Random.Range(minMoveSpeed, maxMoveSpeed);        
     }
        
     void Update()
     {
-        float currentSpeed = originalMoveSpeed * shipscript.multiplier;
+        float currentSpeed = moveSpeed * shipscript.multiplier;
         transform.position = transform.position + (Vector3.down * currentSpeed) * Time.deltaTime;        
         if (transform.position.y < deadZone)
         {
