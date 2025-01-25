@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4342241630698889948}
   - component: {fileID: 8258067886318364727}
   - component: {fileID: 5036306222889977288}
+  - component: {fileID: -3279652108666769441}
   m_Layer: 0
   m_Name: planet1_0 (2)
   m_TagString: Untagged
@@ -104,3 +105,20 @@ MonoBehaviour:
   deadZone: -9
   explodeRadius: 0
   explosionEffect: {fileID: 0}
+  explosionSound: {fileID: 0}
+  soundVolume: 1
+--- !u!114 &-3279652108666769441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2455254092420887685}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 49e9098beb561e74ebb76a5789502594, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  target: {fileID: 0}
+  followSpeed: 5
+  speedMultiplier: 0.5

@@ -11,7 +11,7 @@ public class speedboostspawner : MonoBehaviour
     void Start()
     {
         originalSpawnRate = spawnRate;
-        spawnSpeedBoost();
+        //spawnSpeedBoost();
     }
 
     // Update is called once per frame

@@ -6,10 +6,10 @@ using System.Collections;
 
 public class LogicScript : MonoBehaviour
 {
-    public int playerScore;
+    public static int playerScore;
     public Text scoreText;
     public int speed;
-    public float distance; // Tracks fractional distance for updates
+    public float distance;
     public GameObject gameOverScreen;
     public bool isGameOver = false;
     public Text highScore;
@@ -25,7 +25,8 @@ public class LogicScript : MonoBehaviour
     private void Start()
     {        
         int storedHighScore = PlayerPrefs.GetInt("HighScore", 0); 
-        highScore.text = storedHighScore.ToString();        
+        highScore.text = storedHighScore.ToString();
+        playerScore = 0;
     }
     void Update()
     {
@@ -73,7 +74,7 @@ public class LogicScript : MonoBehaviour
             else
             {
                 mult.text = ""; // Clear the text
-                mult.gameObject.SetActive(false);                
+                mult.gameObject.SetActive(false);
             }
         }
         boostBar.sizeDelta = new Vector2(shipscript.boostTimer * 50, boostBar.sizeDelta.y);        
@@ -87,6 +88,9 @@ public class LogicScript : MonoBehaviour
 
     public void gameOver()
     {
+        mult.text = ""; // Clear the text
+        mult.gameObject.SetActive(false);
+        boostBar.gameObject.SetActive(false);
         isGameOver = true;        
         gameOverScreen.SetActive(true);     
             
@@ -107,8 +111,8 @@ public class LogicScript : MonoBehaviour
     }
     private string FormatTime(float time)
     {
-        int minutes = Mathf.FloorToInt(time / 60); // Get minutes
-        int seconds = Mathf.FloorToInt(time % 60); // Get seconds
+        int minutes = Mathf.FloorToInt(time / 60); 
+        int seconds = Mathf.FloorToInt(time % 60); 
         return string.Format("{0:00}:{1:00}", minutes, seconds);
     }    
 }

@@ -4,7 +4,7 @@ public class speedrampmovescript : MonoBehaviour
 {
     public float minMoveSpeed = 3f; // Minimum move speed
     public float maxMoveSpeed = 7f; // Maximum move speed
-    private float moveSpeed;
+    private float moveSpeed = 0;
     public float deadZone = -20;
     private static float originalMoveSpeed;
     private bool isInsideCollider = false; // Tracks whether the ship is inside the collider

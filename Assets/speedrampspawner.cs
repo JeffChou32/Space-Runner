@@ -13,7 +13,7 @@ public class speedrampspawner : MonoBehaviour
     void Start()
     {
         SetRandomSpawnRate(); // Set an initial random spawn interval
-        spawnSpeedBoost();
+        //spawnSpeedBoost();
     }
 
     // Update is called once per frame

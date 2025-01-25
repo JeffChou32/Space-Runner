@@ -184,7 +184,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   minMoveSpeed: 1
-  maxMoveSpeed: 4
+  maxMoveSpeed: 5
   deadZone: -6
   thrusterSound: {fileID: 8300000, guid: c5377a5bda395ec4294b5fa8819ca9c6, type: 3}
   thrusterSound2: {fileID: 8300000, guid: 95202c024b882ed45a724fe3905100c7, type: 3}
