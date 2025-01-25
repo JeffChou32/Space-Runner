@@ -21,6 +21,7 @@ public class shieldScript : MonoBehaviour
         }       
 
         var colorOverLifetime = shield.colorOverLifetime;
+        var main = shield.main;        
         Gradient gradient = new Gradient();
         if (shipscript.multiplier > 3)
         {
@@ -32,6 +33,8 @@ public class shieldScript : MonoBehaviour
                 new GradientAlphaKey[] { new GradientAlphaKey(1f, 0f), new GradientAlphaKey(1f, 1f) }
                 );
             colorOverLifetime.color = new ParticleSystem.MinMaxGradient(gradient);
+            main.startLifetime = new ParticleSystem.MinMaxCurve(0.1f, 1.8f);
+            main.startSpeed = 60f; 
         }
         else if (shipscript.multiplier == 3)
         {
@@ -43,6 +46,8 @@ public class shieldScript : MonoBehaviour
                 new GradientAlphaKey[] { new GradientAlphaKey(1f, 0f), new GradientAlphaKey(1f, 1f) }
                 );
             colorOverLifetime.color = new ParticleSystem.MinMaxGradient(gradient);
+            main.startLifetime = new ParticleSystem.MinMaxCurve(0.1f, 1.2f);
+            main.startSpeed = 40f;
         }
         
         else if (shipscript.multiplier == 2)
@@ -56,6 +61,8 @@ public class shieldScript : MonoBehaviour
                 new GradientAlphaKey[] { new GradientAlphaKey(1f, 0f), new GradientAlphaKey(1f, 1f) }
             );
             colorOverLifetime.color = new ParticleSystem.MinMaxGradient(gradient);
+            main.startLifetime = new ParticleSystem.MinMaxCurve(0.1f, 1.2f);
+            main.startSpeed = 40f;
         }    
         else if (shipscript.multiplier == 1) if (shield.isPlaying) shield.Stop();
 

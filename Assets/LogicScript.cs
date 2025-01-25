@@ -3,6 +3,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using System.Collections;
+using Unity.VisualScripting;
 
 public class LogicScript : MonoBehaviour
 {
@@ -20,7 +21,8 @@ public class LogicScript : MonoBehaviour
     public Text currentSpeedtxt;
     public Text timerText;
     public float elapsedTime = 0f;
-    public Text warning;    
+    public Text warning;
+    private bool isDisplaying = false;
 
     private void Start()
     {        
@@ -36,7 +38,8 @@ public class LogicScript : MonoBehaviour
         {
             elapsedTime += Time.deltaTime;
             distance += speed * Time.deltaTime;
-            warning.gameObject.SetActive(shipscript.waitingForReturn);
+            //warning.gameObject.SetActive(shipscript.waitingForReturn);
+            UpdateWarning(shipscript.waitingForReturn);
 
             // If 1 second has passed, increase score by speed
             while (distance >= 1f)
@@ -114,5 +117,25 @@ public class LogicScript : MonoBehaviour
         int minutes = Mathf.FloorToInt(time / 60); 
         int seconds = Mathf.FloorToInt(time % 60); 
         return string.Format("{0:00}:{1:00}", minutes, seconds);
-    }    
+    }
+    public void UpdateWarning(bool waitingForReturn)
+    {
+        if (waitingForReturn && !isDisplaying)
+        {
+            // Show the warning and start the delay coroutine
+            warning.gameObject.SetActive(true);
+            StartCoroutine(KeepWarningActive());
+        }
+    }
+
+    private System.Collections.IEnumerator KeepWarningActive()
+    {
+        isDisplaying = true; // Prevent multiple coroutines
+        yield return new WaitForSeconds(2.5f); // Wait for at least 2.5 seconds
+        if (!shipscript.waitingForReturn) // Check the condition after delay
+        {
+            warning.gameObject.SetActive(false);
+        }
+        isDisplaying = false; // Reset the flag
+    }
 }

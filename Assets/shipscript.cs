@@ -14,8 +14,7 @@ public class shipscript : MonoBehaviour
     public static bool shipIsAlive = true;
     public static bool boost = false;        
     public static float boostDuration = 6f;            
-    public static int multiplier = 1;    
-    public Text numBoosts;
+    public static int multiplier = 1;       
     public int speedBoosts;
     public Animator animator;    
     private float startingYPosition;
@@ -106,7 +105,7 @@ public class shipscript : MonoBehaviour
         }
         if (multiplier >= 4)
         {
-            Physics2D.IgnoreLayerCollision(defaultLayer, whiteAsteroidLayer, true);            
+            Physics2D.IgnoreLayerCollision(defaultLayer, whiteAsteroidLayer, true);
         }
         if (multiplier == 1 && Mathf.Approximately(transform.position.y, startingYPosition))
         {
@@ -145,8 +144,7 @@ public class shipscript : MonoBehaviour
     {
         boost = true;
         speedBoosts -= 1;
-        speedhud.boosts -= 1;
-        numBoosts.text = speedBoosts.ToString();
+        speedhud.boosts -= 1;        
         boostTimer += boostDuration;
         multiplier += 1;
         if (multiplier == 2) AudioSource.PlayClipAtPoint(thrusterSound, transform.position, soundVolume);

@@ -29,8 +29,8 @@ public class speedboostscript : MonoBehaviour
         if (ship != null)
         {
             ship.speedBoosts += 1;
-            speedhud.boosts += 1;
-            ship.numBoosts.text = ship.speedBoosts.ToString();
+            speedhud.boosts += 1;            
+            Debug.Log("Destroying speedboost object: " + gameObject.name);
             Destroy(gameObject);
         }
     }    

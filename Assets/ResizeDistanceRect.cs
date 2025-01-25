@@ -8,6 +8,7 @@ public class ResizeDistanceRect : MonoBehaviour
 
     void Update()
     {
+        if (ObjectiveText.objectiveFinished) return;
         if (uiRectangle != null)
         {
             // Get the current score from Logicscript

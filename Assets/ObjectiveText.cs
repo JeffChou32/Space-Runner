@@ -6,18 +6,32 @@ public class ObjectiveText : MonoBehaviour
     public Text objectiveText; // Reference to the Text object
     public float initialDisplayTime = 5f; // Time to show the initial message (in seconds)
     public float objectiveTime = 240f; // Duration of the objective (4 minutes)
+    public float objectiveDistance = 7000;
     public float finalMessageDisplayTime = 5f; // Time to show the success/failure message
 
     private float elapsedTime = 0f; // Tracks elapsed time
     private bool objectiveStarted = false; // Tracks whether the objective has started
     private bool finalMessageShown = false; // Tracks if the final message has been shown
     private float finalMessageTimer = 0f; // Tracks time for the final message display
+    public static bool objectiveFinished;
+    public Text fastestTime;
+    private int finishTime;
 
     void Start()
     {
         // Display the initial objective text
-        ShowText("Objective: Travel 7,000 km in 4 minutes");
+        ShowText($"Objective: Travel {objectiveDistance} km in 4 minutes");
         objectiveStarted = true;
+        objectiveFinished = false;
+        int storedFastestTime = PlayerPrefs.GetInt("FastestTime", int.MaxValue);
+        if (storedFastestTime != int.MaxValue)
+        {            
+            fastestTime.text = $"{FormatTime(storedFastestTime)}";
+        }
+        else
+        {
+            fastestTime.text = "n/a";
+        }
     }
 
     void Update()
@@ -33,18 +47,21 @@ public class ObjectiveText : MonoBehaviour
             }
 
             // Check for success condition
-            if (LogicScript.playerScore >= 10000 && !finalMessageShown)
+            if (LogicScript.playerScore >= objectiveDistance && !finalMessageShown)
             {
-                ShowText("7,000 km traveled. Objective complete!");
+                ShowText($"{objectiveDistance} km traveled. Objective complete in {FormatTime((int)elapsedTime)}!");
+                finishTime = (int)elapsedTime;
                 finalMessageShown = true;
+                objectiveFinished = true;
                 StartFinalMessageTimer();
             }
 
             // Check for failure condition if time runs out
             if (elapsedTime >= objectiveTime && !finalMessageShown)
             {
-                ShowText("4 minutes have passed. Objective failed");
+                ShowText($"4 minutes have passed. {LogicScript.playerScore} km traveled. Objective failed");
                 finalMessageShown = true;
+                //objectiveFinished = true;
                 StartFinalMessageTimer();
             }
 
@@ -57,6 +74,16 @@ public class ObjectiveText : MonoBehaviour
                     HideText();
                     objectiveStarted = false; // Stop further updates
                 }
+            }
+        }
+        if (objectiveFinished)
+        {            
+            int storedFastestTime = PlayerPrefs.GetInt("FastestTime", int.MaxValue);
+            if (finishTime < storedFastestTime)
+            {
+                fastestTime.text = FormatTime(finishTime);
+                PlayerPrefs.SetInt("FastestTime", finishTime);  // Save new high score
+                PlayerPrefs.Save();  // Ensure the score is stored persistently
             }
         }
     }
@@ -78,5 +105,16 @@ public class ObjectiveText : MonoBehaviour
     void StartFinalMessageTimer()
     {
         finalMessageTimer = 0f; // Reset the timer
+    }
+    private string FormatTime(int time)
+    {
+        int minutes = Mathf.FloorToInt(time / 60);
+        int seconds = Mathf.FloorToInt(time % 60);
+        return string.Format("{0:00}:{1:00}", minutes, seconds);
+    }
+    private void OnApplicationQuit()
+    {
+        PlayerPrefs.DeleteKey("FastestTime");
+        PlayerPrefs.Save();  // Ensures the data is cleared from disk
     }
 }

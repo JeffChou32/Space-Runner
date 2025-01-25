@@ -6,10 +6,14 @@ public class ResizeTimeRectangle : MonoBehaviour
     public float targetHeight = 200f; // The desired height
     public float duration = 300f; // Duration to reach the target height (in seconds)
 
-    private float elapsedTime = 0f; // Tracks the elapsed time
+    private float elapsedTime = 0f; // Tracks the elapsed time    
 
     void Update()
     {
+        if (ObjectiveText.objectiveFinished)
+        {
+            return;
+        }
         if (uiRectangle != null && elapsedTime < duration)
         {
             // Increment elapsed time
