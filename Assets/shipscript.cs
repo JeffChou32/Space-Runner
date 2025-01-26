@@ -1,8 +1,8 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using static UnityEditor.Experimental.GraphView.GraphView;
-using static UnityEditor.Experimental.GraphView.Port;
+//using static UnityEditor.Experimental.GraphView.GraphView;
+//using static UnityEditor.Experimental.GraphView.Port;
 public class shipscript : MonoBehaviour
 {
     public Rigidbody2D myRigidBody;
@@ -27,7 +27,7 @@ public class shipscript : MonoBehaviour
     public float soundVolume = 1.0f;
     public AudioClip thrusterSound;
     public AudioClip thrusterSound2;
-    public AudioClip thrusterSound3;
+    public AudioClip thrusterSound3;   
 
     void Start()
     {        
@@ -58,7 +58,7 @@ public class shipscript : MonoBehaviour
             {
                 boostTimer = 0;
                 boost = false;
-                waitingForReturn = true;
+                waitingForReturn = true;                
             }
         }
 
