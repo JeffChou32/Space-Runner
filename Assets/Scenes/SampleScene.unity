@@ -1190,7 +1190,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -263.02, y: -49.58}
+  m_AnchoredPosition: {x: -228.4, y: -57}
   m_SizeDelta: {x: 703.48, y: 116.73}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &351092271
@@ -2124,7 +2124,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 82.8}
+  m_AnchoredPosition: {x: 0, y: 76.6}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!4 &740784273 stripped
@@ -2374,7 +2374,7 @@ CircleCollider2D:
   m_CompositeOperation: 0
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: -0.04}
-  m_Radius: 0.13
+  m_Radius: 0.11
 --- !u!212 &749571688
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -4666,7 +4666,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -163.62, y: 809.8}
+  m_AnchoredPosition: {x: -163.62, y: 803.4}
   m_SizeDelta: {x: 703.48, y: 116.73}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &1644415788
@@ -4947,8 +4947,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 426.594, y: 801.62}
-  m_SizeDelta: {x: 180.7119, y: 116.73}
+  m_AnchoredPosition: {x: 391.9665, y: 801.62}
+  m_SizeDelta: {x: 249.9668, y: 116.73}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1825456825
 MonoBehaviour:
@@ -4972,7 +4972,7 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 12800000, guid: cbcfcefa2c06f6742839bea439c56198, type: 3}
-    m_FontSize: 50
+    m_FontSize: 57
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 3
@@ -5315,7 +5315,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -3957692511846245250, guid: 7b2065a7d51b6c34cb7a9ebdd279eee5, type: 3}
       propertyPath: minSpawnRate
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4315190715772623670, guid: 7b2065a7d51b6c34cb7a9ebdd279eee5, type: 3}
       propertyPath: m_LocalPosition.x
