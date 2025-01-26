@@ -59,9 +59,8 @@ public class ObjectiveText : MonoBehaviour
             // Check for failure condition if time runs out
             if (elapsedTime >= objectiveTime && !finalMessageShown)
             {
-                ShowText($"4 minutes have passed. {LogicScript.playerScore} km traveled. Objective failed");
-                finalMessageShown = true;
-                //objectiveFinished = true;
+                ShowText($"4 minutes have passed. \n{LogicScript.playerScore} km traveled. \nObjective failed");
+                finalMessageShown = true;                
                 StartFinalMessageTimer();
             }
 

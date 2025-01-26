@@ -32,17 +32,14 @@ public class LogicScript : MonoBehaviour
         playerScore = 0;
     }
     void Update()
-    {
-        // Accumulate distance based on speed and time
+    {       
         var boostBarImage = boostBar.GetComponent<Image>();
         if (!isGameOver)
         {
             elapsedTime += Time.deltaTime;
-            distance += speed * Time.deltaTime;
-            //warning.gameObject.SetActive(shipscript.waitingForReturn);
+            distance += speed * Time.deltaTime;            
             UpdateWarning(shipscript.waitingForReturn);
-
-            // If 1 second has passed, increase score by speed
+            
             while (distance >= 1f)
             {
                 playerScore += (1*shipscript.multiplier);
@@ -77,9 +74,15 @@ public class LogicScript : MonoBehaviour
             }
             else
             {
-                mult.text = ""; // Clear the text
+                mult.text = ""; 
                 mult.gameObject.SetActive(false);
             }
+            if (shipscript.waitingForReturn)
+            {
+                mult.text = ""; 
+                mult.gameObject.SetActive(false);
+            }
+                
         }
         boostBar.sizeDelta = new Vector2(shipscript.boostTimer * 50, boostBar.sizeDelta.y);        
         timerText.text = FormatTime(elapsedTime);
@@ -92,7 +95,7 @@ public class LogicScript : MonoBehaviour
 
     public void gameOver()
     {
-        mult.text = ""; // Clear the text
+        mult.text = ""; 
         mult.gameObject.SetActive(false);
         boostBar.gameObject.SetActive(false);
         isGameOver = true;        
@@ -132,7 +135,7 @@ public class LogicScript : MonoBehaviour
     private System.Collections.IEnumerator KeepWarningActive()
     {
         isDisplaying = true; // Prevent multiple coroutines
-        yield return new WaitForSeconds(2.5f); // Wait for at least 2.5 seconds
+        yield return new WaitForSeconds(1.3f); 
         if (!shipscript.waitingForReturn) // Check the condition after delay
         {
             warning.gameObject.SetActive(false);

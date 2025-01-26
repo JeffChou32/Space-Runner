@@ -252,7 +252,7 @@ MonoBehaviour:
   objectiveText: {fileID: 70614618}
   initialDisplayTime: 5
   objectiveTime: 240
-  objectiveDistance: 7000
+  objectiveDistance: 8000
   finalMessageDisplayTime: 5
   fastestTime: {fileID: 1616654862}
 --- !u!114 &70614618
@@ -410,12 +410,11 @@ RectTransform:
   - {fileID: 227361514}
   - {fileID: 235593919}
   - {fileID: 1825456824}
-  - {fileID: 736023280}
   - {fileID: 819189258}
   - {fileID: 500645265}
   - {fileID: 1616654864}
   - {fileID: 1528038104}
-  - {fileID: 554861221}
+  - {fileID: 736023280}
   - {fileID: 174968990}
   - {fileID: 70614616}
   - {fileID: 1849320252}
@@ -1554,16 +1553,16 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 554861218}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 155882259}
+  m_Father: {fileID: 1528038104}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 535.3}
+  m_AnchoredPosition: {x: 0, y: -214.0799}
   m_SizeDelta: {x: 426.1238, y: 409.9969}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1001 &575036458
@@ -3002,7 +3001,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   uiRectangle: {fileID: 931551664}
-  maxScore: 7000
+  maxScore: 8000
   maxHeight: 300
 --- !u!1 &964772123
 GameObject:
@@ -4533,12 +4532,13 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 554861221}
   m_Father: {fileID: 155882259}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 749.38}
+  m_AnchoredPosition: {x: 0, y: 641.7}
   m_SizeDelta: {x: 0, y: 34}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1528038105
@@ -5311,11 +5311,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -3957692511846245250, guid: 7b2065a7d51b6c34cb7a9ebdd279eee5, type: 3}
       propertyPath: maxSpawnRate
-      value: 10
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: -3957692511846245250, guid: 7b2065a7d51b6c34cb7a9ebdd279eee5, type: 3}
       propertyPath: minSpawnRate
-      value: 6
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4315190715772623670, guid: 7b2065a7d51b6c34cb7a9ebdd279eee5, type: 3}
       propertyPath: m_LocalPosition.x
