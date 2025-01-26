@@ -24,5 +24,13 @@ Boosts automatically activate shields:<br>
  Add sound effects and background music for a more engaging experience.<br>
  Custom levels with varying density of asteroids and custom objectives.
 
+## Important Note
+
+Asteroid Rush was designed with mobile platforms in mind, offering an immersive experience optimized for touch controls and mobile screens. 
+
+This Windows build serves as a demo version to showcase the core gameplay mechanics.
+
+PLAY at https://JeffChou32.github.io
+
 Developed using Unity and C#.<br>
 Inspiration from classic arcade games and endless runners.
