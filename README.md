@@ -19,7 +19,8 @@ Boosts automatically activate shields:<br>
 
 Stack as many multipliers as possible to achieve your objective in record time!
 
-Tech Demo Objective: Travel 9,000 km in 4 minutes. Track your progress in the upper-right hud. Green bar represents time, yellow bar represents speed. 
+Tech Demo Objective: Travel 9,000 km in 4 minutes. <br>
+Track your progress in the upper-right hud. Green bar represents time, yellow bar represents speed. 
 
 🌌 Development Roadmap<br>
  Add additional ship designs and customization options.<br>
