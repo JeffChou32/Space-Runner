@@ -142,4 +142,8 @@ public class LogicScript : MonoBehaviour
         }
         isDisplaying = false; // Reset the flag
     }
+    public void help()
+    {
+        SceneManager.LoadSceneAsync(1);
+    }
 }

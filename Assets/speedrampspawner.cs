@@ -3,20 +3,23 @@ using UnityEngine;
 public class speedrampspawner : MonoBehaviour
 {
     public GameObject speedRamp;
-    public float minSpawnRate = 1f; // Minimum spawn interval
-    public float maxSpawnRate = 3f; // Maximum spawn interval
+    public float minSpawnRate = 1f; 
+    public float maxSpawnRate = 3f; 
     public float heightOffset = 10;
 
-    private float currentSpawnRate; // Current spawn interval
+    private float currentSpawnRate; 
     private float timer = 0;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    private float originalMinSpawnRate;
+    private float originalMaxSpawnRate;
+
     void Start()
     {
-        SetRandomSpawnRate(); // Set an initial random spawn interval
-        //spawnSpeedBoost();
-    }
+        SetRandomSpawnRate();
+        originalMinSpawnRate = minSpawnRate;
+        originalMaxSpawnRate = maxSpawnRate;
 
-    // Update is called once per frame
+    }
+        
     void Update()
     {
         if (timer < currentSpawnRate)
@@ -27,7 +30,16 @@ public class speedrampspawner : MonoBehaviour
         {
             spawnSpeedBoost();
             timer = 0;
-            SetRandomSpawnRate(); // Set a new random spawn interval
+            SetRandomSpawnRate(); 
+        }
+        if (shipscript.multiplier > 3)
+        {
+            minSpawnRate = 2;
+            maxSpawnRate = 4;
+        } else
+        {
+            minSpawnRate = originalMinSpawnRate;
+            maxSpawnRate = originalMaxSpawnRate;
         }
 
     }
