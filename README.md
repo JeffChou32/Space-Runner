@@ -14,14 +14,16 @@ Stack Boosts: Boosts stack to increase duration and multiplier.
 
 Boosts automatically activate shields:<br>
 2x Multiplier: Immune to Brown Asteroids.<br>
-3x Multiplier: Immune to Blue Asteroids.<br>
-4x Multiplier: Immune to All Asteroids.
+3x Multiplier: Additionally immune to Blue Asteroids.<br>
+4x Multiplier and up: Immune to All Asteroids. 
+
+Stack as many multipliers as possible to achieve your objective in record time!
 
 🌌 Development Roadmap<br>
  Add additional ship designs and customization options.<br>
  Introduce new types of obstacles, power-ups, and ship perks/upgrades.<br>
  Custom levels with varying density/size of asteroid fields and mixed objectives.<br>
-  Implement a leaderboard system to track high scores.
+ Implement a leaderboard system to track high scores.
 
 ## Important Note
 
