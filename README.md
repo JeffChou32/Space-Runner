@@ -20,8 +20,8 @@ Boosts automatically activate shields:<br>
 🌌 Development Roadmap<br>
  Add additional ship designs and customization options.<br>
  Introduce new types of obstacles, power-ups, and ship perks/upgrades.<br>
- Implement a leaderboard system to track high scores.<br>
- Custom levels with varying density of asteroids and custom objectives.
+ Custom levels with varying density/size of asteroid fields and mixed objectives.<br>
+  Implement a leaderboard system to track high scores.
 
 ## Important Note
 
