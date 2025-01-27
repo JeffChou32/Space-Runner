@@ -17,6 +17,7 @@ Boosts automatically activate shields:<br>
 3x Multiplier: Additionally immune to Blue Asteroids.<br>
 4x Multiplier and up: Immune to All Asteroids. 
 
+Keep an eye on your boost gauge and manage your speed boosts. <br>
 Stack as many multipliers as possible to achieve your objective in record time!
 
 Tech Demo Objective: Travel 9,000 km in 4 minutes. <br>
