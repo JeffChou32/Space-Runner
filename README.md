@@ -21,7 +21,6 @@ Boosts automatically activate shields:<br>
  Add additional ship designs and customization options.<br>
  Introduce new types of obstacles, power-ups, and ship perks/upgrades.<br>
  Implement a leaderboard system to track high scores.<br>
- Add sound effects and background music for a more engaging experience.<br>
  Custom levels with varying density of asteroids and custom objectives.
 
 ## Important Note
