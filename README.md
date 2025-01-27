@@ -8,8 +8,13 @@ A: Steer Left<br>
 D: Steer Right
 
 Collect Speed Boosts: Pick up speed boosts scattered across the map.<br>
-W: Activate Speed Boosts to enhance speed and shield protection.<br>
+<img src="https://github.com/user-attachments/assets/17420af8-655f-456e-9116-ebb4f5d01668" alt="ship1" width="7%">
+
+W: Activate Speed Boosts to enhance speed and shield protection.
+
 Spacebar: Trigger boosts when passing through speed ramps for an extra push!<br>
+<img src="https://github.com/user-attachments/assets/43c7f067-2d1f-4fe0-bc71-eff110269ac5" alt="ship1" width="30%">
+
 Stack Boosts: Boosts stack to increase duration and multiplier.
 
 Boosts automatically activate shields:<br>
