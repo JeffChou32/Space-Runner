@@ -29,7 +29,7 @@ Stack as many multipliers as possible to achieve your objective in record time!
 Tech Demo Objective: Travel 9,000 km in 4 minutes. <br>
 Track your progress in the upper-right hud. Green bar represents time, yellow bar represents speed. 
 
-![ui](https://github.com/user-attachments/assets/94ccb231-368d-4b79-9b1c-4932d115b98e)
+<img src="https://github.com/user-attachments/assets/94ccb231-368d-4b79-9b1c-4932d115b98e" alt="ui" width="15%">
 
 🌌 Development Roadmap<br>
  Add additional ship designs and customization options.<br>
