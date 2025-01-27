@@ -1,6 +1,6 @@
 🚀 Asteroid Rush: Alpha Build
 
-A fast-paced, 2D space adventure game where you pilot a ship, dodge asteroids, and use speed boosts with powerful shields! Test your reflexes and see how far you can go in this thrilling endless runner.
+A fast-paced, 2D space adventure game where you pilot a ship and use powerful thrusters to boost your way through asteroid fields! Test your reflexes and see how far you can go in this thrilling endless runner.
 
 🎮 How to Play<br>
 Steer the Ship:<br>
@@ -14,14 +14,16 @@ Stack Boosts: Boosts stack to increase duration and multiplier.
 
 Boosts automatically activate shields:<br>
 2x Multiplier: Immune to Brown Asteroids.<br>
-3x Multiplier: Immune to Blue Asteroids.<br>
-4x Multiplier: Immune to All Asteroids.
+3x Multiplier: Additionally immune to Blue Asteroids.<br>
+4x Multiplier and up: Immune to All Asteroids. 
+
+Stack as many multipliers as possible to achieve your objective in record time!
 
 🌌 Development Roadmap<br>
  Add additional ship designs and customization options.<br>
  Introduce new types of obstacles, power-ups, and ship perks/upgrades.<br>
- Implement a leaderboard system to track high scores.<br>
- Custom levels with varying density of asteroids and custom objectives.
+ Custom levels with varying density/size of asteroid fields and mixed objectives.<br>
+ Implement a leaderboard system to track high scores.
 
 ## Important Note
 
