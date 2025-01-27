@@ -14,13 +14,13 @@ Stack Boosts: Boosts stack to increase duration and multiplier.
 
 Boosts automatically activate shields:<br>
 2x Multiplier: Immune to Brown Asteroids.<br>
-![ship1](https://github.com/user-attachments/assets/7f4cc69c-c67e-48dc-8fe8-bb72e7b23937)
+<img src="https://github.com/user-attachments/assets/7f4cc69c-c67e-48dc-8fe8-bb72e7b23937" alt="ship1" width="7%">
 
 3x Multiplier: Additionally immune to Blue Asteroids.<br>
-![ship2](https://github.com/user-attachments/assets/8e940645-b873-4f15-b6bc-bdf11fec23fc)
+<img src="https://github.com/user-attachments/assets/8e940645-b873-4f15-b6bc-bdf11fec23fc" alt="ship2" width="7%">
 
 4x Multiplier and up: Immune to All Asteroids. <br>
-![ship3](https://github.com/user-attachments/assets/ed28b59f-cfa4-4717-b8ad-80e93c4ff2e0)
+<img src="https://github.com/user-attachments/assets/ed28b59f-cfa4-4717-b8ad-80e93c4ff2e0" alt="ship3" width="7%">
 
 
 Keep an eye on your boost gauge and manage your speed boosts. <br>
