@@ -1,6 +1,6 @@
 🚀 Asteroid Rush: Alpha Build
 
-A fast-paced, 2D space adventure game where you pilot a ship, dodge asteroids, and use speed boosts coupled with powerful shields! Test your reflexes and see how far you can go in this thrilling endless runner.
+A fast-paced, 2D space adventure game where you pilot a ship and use powerful thrusters to boost your way through asteroid fields! Test your reflexes and see how far you can go in this thrilling endless runner.
 
 🎮 How to Play<br>
 Steer the Ship:<br>
