@@ -21,6 +21,7 @@ Spacebar: Trigger boosts when passing through speed ramps for an extra push!<br>
 
 Stack Boosts: Boosts stack to increase duration and multiplier.
 
+
 Boosts automatically activate shields:
 
 2x Multiplier: Immune to Brown Asteroids.<br>
