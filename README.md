@@ -14,14 +14,22 @@ Stack Boosts: Boosts stack to increase duration and multiplier.
 
 Boosts automatically activate shields:<br>
 2x Multiplier: Immune to Brown Asteroids.<br>
+![ship1](https://github.com/user-attachments/assets/7f4cc69c-c67e-48dc-8fe8-bb72e7b23937)
+
 3x Multiplier: Additionally immune to Blue Asteroids.<br>
-4x Multiplier and up: Immune to All Asteroids. 
+![ship2](https://github.com/user-attachments/assets/8e940645-b873-4f15-b6bc-bdf11fec23fc)
+
+4x Multiplier and up: Immune to All Asteroids. <br>
+![ship3](https://github.com/user-attachments/assets/ed28b59f-cfa4-4717-b8ad-80e93c4ff2e0)
+
 
 Keep an eye on your boost gauge and manage your speed boosts. <br>
 Stack as many multipliers as possible to achieve your objective in record time!
 
 Tech Demo Objective: Travel 9,000 km in 4 minutes. <br>
 Track your progress in the upper-right hud. Green bar represents time, yellow bar represents speed. 
+
+![ui](https://github.com/user-attachments/assets/94ccb231-368d-4b79-9b1c-4932d115b98e)
 
 🌌 Development Roadmap<br>
  Add additional ship designs and customization options.<br>
