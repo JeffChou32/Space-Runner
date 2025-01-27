@@ -1,5 +1,11 @@
 🚀 Asteroid Rush: Alpha Build
 
+<div style="display: flex; gap: 100px;">
+<img src="https://github.com/user-attachments/assets/e85d0ab2-f117-4bd1-a737-9cc0bb44e8c9" alt="PREVIEW3" width="25%">
+<img src="https://github.com/user-attachments/assets/cf973f0e-ec17-4a4f-b12b-4251b2c59fe6" alt="PREVIEW5" width="25%">
+<img src="https://github.com/user-attachments/assets/9a9d0408-7aed-4015-9057-ded7ec2bf0db" alt="PREVIEW1" width="25%">
+</div>
+
 A fast-paced, 2D space adventure game where you pilot a ship and use powerful thrusters to boost your way through asteroid fields! Test your reflexes and see how far you can go in this thrilling endless runner.
 
 🎮 How to Play<br>
