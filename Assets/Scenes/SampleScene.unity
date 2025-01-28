@@ -4040,11 +4040,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3043679742459744328, guid: 7b00892b78a70ba4a8c67d3dff8a7e59, type: 3}
       propertyPath: spawnRate
-      value: 14
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 3043679742459744328, guid: 7b00892b78a70ba4a8c67d3dff8a7e59, type: 3}
       propertyPath: heightOffset
-      value: 9
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 3711284134307231010, guid: 7b00892b78a70ba4a8c67d3dff8a7e59, type: 3}
       propertyPath: ship
@@ -5520,7 +5520,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -3957692511846245250, guid: 7b2065a7d51b6c34cb7a9ebdd279eee5, type: 3}
       propertyPath: heightOffset
-      value: 2
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -3957692511846245250, guid: 7b2065a7d51b6c34cb7a9ebdd279eee5, type: 3}
       propertyPath: maxSpawnRate
