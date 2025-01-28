@@ -7,14 +7,13 @@ public class speedboostspawner : MonoBehaviour
     private float originalSpawnRate;
     private float timer = 0;
     public float heightOffset = 10;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+  
     void Start()
     {
-        originalSpawnRate = spawnRate;
-        //spawnSpeedBoost();
+        originalSpawnRate = spawnRate;        
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
         spawnRate = originalSpawnRate / shipscript.multiplier;
