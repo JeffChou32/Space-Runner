@@ -48,7 +48,7 @@ _________________________________________
  Add additional ship designs and customization options.<br>
  Introduce new types of obstacles, power-ups, and ship perks/upgrades.<br>
  Custom levels with varying density/size of asteroid fields and mixed objectives.<br>
- Implement a leaderboard system to track high scores.
+ Implement an online leaderboard system to track high scores.
 
 ## Important Note
 
