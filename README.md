@@ -45,7 +45,7 @@ Green bar represents time, yellow bar represents distance traveled.
 
 _________________________________________
 🌌 Development Roadmap<br>
- Extra lives <br>
+ Ship durability with repair pickups <br>
  Ship dash left/right <br>
  Add additional ship designs and customization options.<br>
  Introduce new types of obstacles, power-ups, and ship upgrades.<br>
