@@ -45,8 +45,10 @@ Green bar represents time, yellow bar represents distance traveled.
 
 _________________________________________
 🌌 Development Roadmap<br>
+ Ship durability with repair pickups <br>
+ Ship dash left/right <br>
  Add additional ship designs and customization options.<br>
- Introduce new types of obstacles, power-ups, and ship perks/upgrades.<br>
+ Introduce new types of obstacles, power-ups, and ship upgrades.<br>
  Custom levels with varying density/size of asteroid fields and mixed objectives.<br>
  Implement an online leaderboard system to track high scores.
 
