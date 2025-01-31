@@ -10,7 +10,7 @@ public class ResizeTimeRectangle : MonoBehaviour
 
     void Update()
     {
-        if (ObjectiveText.objectiveFinished)
+        if (ObjectiveText.objectiveFinished || LogicScript.isGameOver)
         {
             return;
         }

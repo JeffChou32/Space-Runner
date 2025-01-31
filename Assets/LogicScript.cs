@@ -12,7 +12,7 @@ public class LogicScript : MonoBehaviour
     public int speed;
     public float distance;
     public GameObject gameOverScreen;
-    public bool isGameOver = false;
+    public static bool isGameOver = false;
     public Text highScore;
     public Text mult;
     public Color sample;
@@ -25,7 +25,8 @@ public class LogicScript : MonoBehaviour
     private bool isDisplaying = false;
 
     private void Start()
-    {        
+    {
+        isGameOver = false;
         int storedHighScore = PlayerPrefs.GetInt("HighScore", 0);
         if (storedHighScore == 0) highScore.text ="n/a";
         else highScore.text = storedHighScore.ToString();

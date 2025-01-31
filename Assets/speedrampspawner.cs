@@ -32,7 +32,7 @@ public class speedrampspawner : MonoBehaviour
             timer = 0;
             SetRandomSpawnRate(); 
         }
-        if (shipscript.multiplier > 4)
+        if (shipscript.multiplier > 3)
         {
             minSpawnRate = 2;
             maxSpawnRate = 4;
