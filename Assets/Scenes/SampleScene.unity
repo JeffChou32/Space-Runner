@@ -1563,7 +1563,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ship: {fileID: 749571689}
-  followSpeed: 5
+  followSpeed: 2
   offset: {x: 0, y: 0, z: 0}
 --- !u!1 &554861218
 GameObject:
@@ -2405,7 +2405,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   myRigidBody: {fileID: 749571685}
-  acceleration: 6
+  acceleration: 10
   maxSpeed: 3
   friction: 1
   logic: {fileID: 0}
@@ -5524,11 +5524,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -3957692511846245250, guid: 7b2065a7d51b6c34cb7a9ebdd279eee5, type: 3}
       propertyPath: maxSpawnRate
-      value: 8
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: -3957692511846245250, guid: 7b2065a7d51b6c34cb7a9ebdd279eee5, type: 3}
       propertyPath: minSpawnRate
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4315190715772623670, guid: 7b2065a7d51b6c34cb7a9ebdd279eee5, type: 3}
       propertyPath: m_LocalPosition.x
