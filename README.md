@@ -3,7 +3,8 @@
 # 🚀 Asteroid Rush: Alpha Build
 
 A fast-paced, 2D space adventure game where you pilot a ship and use powerful thrusters to boost your way through asteroid fields! <br>
-Test your reflexes and see how far you can go in this thrilling endless runner.
+Test your reflexes and see how far you can go in this thrilling endless runner.\
+**PLAY at https://JeffChou32.github.io**
 
 ## 🎮 How to Play
 **Steer the Ship:**
